@@ -127,3 +127,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Fichiers de démo générés par les scripts d'automatisation (recréés à l'exécution)
+automatisation/**/exemples/
