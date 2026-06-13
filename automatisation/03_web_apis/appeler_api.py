@@ -10,29 +10,37 @@ Nécessite : une connexion Internet + la bibliothèque 'requests'
 Lance-le :  python3 automatisation/03_web_apis/appeler_api.py
 """
 
+# 'requests' est une bibliothèque TIERCE (installée via pip), pas de la stdlib.
 import requests
 
 # ─────────────────────────────────────────────
-# 1. L'URL de l'API + les "paramètres" de notre demande.
-#    requests ajoute proprement ces paramètres à l'URL (?latitude=...&longitude=...).
+# 1. L'URL (l'adresse) de l'API + les "paramètres" de notre demande.
 # ─────────────────────────────────────────────
 URL = "https://api.open-meteo.com/v1/forecast"
+
+# Un dictionnaire de paramètres. requests va les coller proprement à la fin de
+# l'URL, sous la forme  ?latitude=48.85&longitude=2.35&current_weather=True
 parametres = {
-    "latitude": 48.85,        # Paris
+    "latitude": 48.85,        # coordonnées de Paris
     "longitude": 2.35,
-    "current_weather": True,  # on veut la météo actuelle
+    "current_weather": True,  # on demande la météo ACTUELLE
 }
 
 
 def obtenir_meteo():
     """Appelle l'API et renvoie les données météo actuelles (un dictionnaire)."""
-    # timeout=10 : on abandonne si le serveur n'a pas répondu en 10 secondes.
+    # requests.get(...) envoie une requête de type GET ("donne-moi des données").
+    #   params=parametres -> ajoute nos paramètres à l'URL
+    #   timeout=10        -> abandonne si le serveur ne répond pas en 10 secondes
+    #                        (sinon le programme pourrait attendre pour toujours)
     reponse = requests.get(URL, params=parametres, timeout=10)
 
-    # raise_for_status() déclenche une erreur claire si le code n'est pas 2xx.
+    # Le serveur renvoie un "code de statut" (200 = OK, 404 = introuvable, etc.).
+    # .raise_for_status() déclenche une erreur claire si le code n'est PAS un succès.
     reponse.raise_for_status()
 
-    # .json() transforme la réponse JSON en dictionnaire Python.
+    # La réponse arrive au format JSON (texte). .json() le convertit
+    # automatiquement en dictionnaire Python, qu'on peut fouiller.
     return reponse.json()
 
 
@@ -40,14 +48,18 @@ def obtenir_meteo():
 # Programme principal
 # ─────────────────────────────────────────────
 if __name__ == "__main__":
-    # try / except : on "essaie" le code, et si une erreur réseau survient,
-    # on l'attrape pour afficher un message propre au lieu de planter.
+    # try / except : on "ESSAIE" le code risqué (le réseau peut échouer).
+    #   - si tout va bien, le bloc 'try' s'exécute normalement,
+    #   - si une erreur réseau survient, Python saute dans le bloc 'except'
+    #     au lieu de planter avec un message effrayant.
     try:
         donnees = obtenir_meteo()
-        meteo = donnees["current_weather"]   # on creuse dans le dictionnaire
+        # donnees est un dictionnaire ; on creuse dedans avec les crochets [ ].
+        meteo = donnees["current_weather"]
 
         print("☁️  Météo actuelle à Paris")
         print(f"  Température : {meteo['temperature']} °C")
         print(f"  Vent        : {meteo['windspeed']} km/h")
     except requests.RequestException as erreur:
+        # 'as erreur' range les détails du problème dans la variable 'erreur'.
         print(f"❌ Problème de connexion à l'API : {erreur}")

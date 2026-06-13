@@ -3,7 +3,7 @@ MODULE 02 - Mini-projet : ranger automatiquement un dossier
 ===========================================================
 Le scénario classique : un dossier "Téléchargements" en bazar, plein de
 fichiers de toutes sortes. Ce script les TRIE dans des sous-dossiers selon
-leur extension (.pdf -> PDF/, .jpg -> Images/, etc.).
+leur extension (.pdf -> Documents/, .jpg -> Images/, etc.).
 
 Pour ne RIEN casser chez toi, le script crée d'abord un faux dossier de test
 rempli de fichiers vides, puis le range. Adapte ensuite 'dossier_a_ranger'
@@ -15,8 +15,8 @@ Lance-le :  python3 automatisation/02_fichiers_dossiers/ranger_dossier.py
 from pathlib import Path
 
 # ─────────────────────────────────────────────
-# 1. On associe chaque extension à un dossier de destination.
-#    (Un dictionnaire : la clé = l'extension, la valeur = le nom du dossier.)
+# 1. Un dictionnaire qui associe chaque extension à un dossier de destination.
+#    Clé = l'extension du fichier (avec le point) ; valeur = le nom du dossier cible.
 # ─────────────────────────────────────────────
 RANGEMENT = {
     ".pdf": "Documents",
@@ -32,8 +32,13 @@ RANGEMENT = {
 }
 
 
+# Décodage de la signature de la fonction :
+#   base: Path   -> on indique que 'base' est censé être un chemin (Path).
+#                   C'est une "annotation de type" : une aide à la lecture, optionnelle.
+#   -> None      -> indique que la fonction ne RENVOIE rien (elle agit, c'est tout).
 def preparer_dossier_de_test(base: Path) -> None:
     """Crée un dossier 'bazar' rempli de fichiers vides pour la démo."""
+    # parents=True -> crée aussi les dossiers parents manquants si besoin.
     base.mkdir(parents=True, exist_ok=True)
     faux_fichiers = [
         "facture.pdf", "photo_vacances.jpg", "notes.txt",
@@ -41,19 +46,27 @@ def preparer_dossier_de_test(base: Path) -> None:
         "fichier_inconnu.xyz",          # extension non prévue : on le laissera tranquille
     ]
     for nom in faux_fichiers:
-        (base / nom).touch()            # .touch() crée un fichier vide
+        # (base / nom) construit le chemin complet ; .touch() crée un fichier VIDE.
+        (base / nom).touch()
     print(f"[+] Dossier de test prêt : {base}")
 
 
 def ranger(dossier: Path) -> None:
     """Déplace chaque fichier du dossier dans le sous-dossier qui lui correspond."""
+    # .iterdir() = "itère sur le dossier" = parcourt chacun de ses éléments.
     for element in dossier.iterdir():
-        # On ignore les sous-dossiers : on ne range que les FICHIERS.
+        # .is_dir() = "est-ce un dossier ?". On ne range que les FICHIERS,
+        # donc si c'est un dossier, 'continue' saute directement au tour suivant.
         if element.is_dir():
             continue
 
-        extension = element.suffix.lower()        # ".JPG" -> ".jpg"
-        destination_nom = RANGEMENT.get(extension)  # None si extension inconnue
+        # .suffix = l'extension du fichier (ex : ".JPG"). .lower() la met en
+        # minuscules pour que ".JPG" et ".jpg" soient traités pareil.
+        extension = element.suffix.lower()
+
+        # .get(cle) cherche la clé dans le dictionnaire. S'il ne la trouve pas,
+        # il renvoie None (au lieu de planter). Ici None = extension non prévue.
+        destination_nom = RANGEMENT.get(extension)
 
         if destination_nom is None:
             print(f"[ ] Ignoré (extension inconnue) : {element.name}")
@@ -63,13 +76,16 @@ def ranger(dossier: Path) -> None:
         destination = dossier / destination_nom
         destination.mkdir(exist_ok=True)
 
-        # On déplace le fichier. .rename() = couper/coller.
+        # .rename(nouveau_chemin) = renommer/DÉPLACER le fichier (couper-coller).
+        #   element.name = juste le nom du fichier (sans le chemin).
         element.rename(destination / element.name)
         print(f"[+] {element.name}  ->  {destination_nom}/")
 
 
 # ─────────────────────────────────────────────
-# Programme principal
+# Programme principal.
+# 'if __name__ == "__main__":' = "n'exécute ce bloc que si on LANCE ce fichier
+# directement" (et pas si un autre fichier l'importe). Détaillé au module 04.
 # ─────────────────────────────────────────────
 if __name__ == "__main__":
     # Ce dossier de test est créé à côté du script.

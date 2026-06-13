@@ -14,25 +14,33 @@ c'est écrit pour TOI. Lis-les, ce sont des explications.
 # ─────────────────────────────────────────────
 # 1. AFFICHER DU TEXTE avec print()
 # ─────────────────────────────────────────────
-# print() affiche à l'écran ce qu'on met entre parenthèses.
-# Le texte entre guillemets "..." s'appelle une "chaîne de caractères".
+# Décodage de la ligne ci-dessous, morceau par morceau :
+#   print   = le nom de l'instruction qui "affiche à l'écran"
+#   ( )     = les parenthèses contiennent ce qu'on veut afficher
+#   "..."   = les guillemets délimitent du TEXTE (une "chaîne de caractères")
 print("Bonjour le monde ! 👋")
 print("Je viens de lancer mon premier programme Python.")
 
-# On peut afficher plusieurs lignes : Python lit de haut en bas, une par une.
+# Python lit les lignes de HAUT en BAS, une par une, dans l'ordre.
 print("Cette ligne s'affiche après les précédentes.")
 
 
 # ─────────────────────────────────────────────
 # 2. POSER UNE QUESTION avec input()
 # ─────────────────────────────────────────────
-# input() met le programme en PAUSE et attend que tu tapes quelque chose,
-# puis valide avec Entrée. Ce que tu tapes est "récupéré" dans une variable.
-# (Une variable = une boîte étiquetée qui retient une valeur. Voir module 01.)
+# input("...") fait 3 choses :
+#   1. affiche le texte entre guillemets (la question),
+#   2. met le programme EN PAUSE et attend que tu tapes quelque chose + Entrée,
+#   3. renvoie ce que tu as tapé.
+#
+# Le signe '=' RANGE ce résultat dans une "variable" nommée prenom.
+#   Une variable = une boîte étiquetée qui retient une valeur pour la réutiliser.
 prenom = input("Comment t'appelles-tu ? ")
 
-# On réutilise ce que la personne a tapé.
-# Le 'f' devant les guillemets permet d'insérer une variable entre accolades {}.
+# Décodage du f"..." (on l'appelle une "f-string") :
+#   le 'f' juste avant les guillemets active un mode spécial,
+#   où tout ce qui est entre accolades { } est REMPLACÉ par la valeur de la variable.
+#   Ici {prenom} sera remplacé par ce que la personne a tapé.
 print(f"Enchanté, {prenom} ! Bienvenue dans le monde de Python. 🐍")
 
 

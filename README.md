@@ -68,6 +68,7 @@ python3 automatisation/00_demarrer/premier_script.py
 | 3 | `03_web_apis` | Télécharger une page, appeler une API, extraire des infos (scraping) |
 | 4 | `04_taches_scripts` | Créer des scripts réutilisables et les planifier (cron / Windows) |
 | 5 | `05_donnees_rapports` | Nettoyer des données et générer des rapports automatiques (pandas) |
+| 6 | `06_bibliotheques` | Savoir quelle bibliothèque ajouter, quand, et comment (`pip`) |
 
 👉 **Suis les modules dans l'ordre.** Chaque module suppose que tu as compris le précédent.
 

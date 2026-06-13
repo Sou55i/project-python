@@ -29,6 +29,7 @@ une énorme bibliothèque d'outils tout prêts.
 | [03_web_apis](./03_web_apis/) | HTTP, requêtes, APIs, HTML | Récupérer la météo via une API |
 | [04_taches_scripts](./04_taches_scripts/) | Arguments, planification (cron) | Un script de sauvegarde planifié |
 | [05_donnees_rapports](./05_donnees_rapports/) | Tableaux de données, agrégation | Un rapport de ventes automatique |
+| [06_bibliotheques](./06_bibliotheques/) | Stdlib vs tierces, pip, requirements | Explorer les modules installés |
 
 ## Comment bien apprendre
 

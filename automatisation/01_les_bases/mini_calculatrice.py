@@ -9,7 +9,11 @@ Pour quitter : tape 'q' quand on te demande l'opération.
 """
 
 
-# Une fonction par opération : code clair et réutilisable.
+# Une fonction par opération : du code clair, nommé et réutilisable.
+#   def        -> "je définis une fonction"
+#   additionner-> son nom
+#   (a, b)     -> ses deux PARAMÈTRES (les deux nombres à traiter)
+#   return     -> renvoie le résultat à celui qui a appelé la fonction
 def additionner(a, b):
     return a + b
 
@@ -19,14 +23,15 @@ def soustraire(a, b):
 
 
 def multiplier(a, b):
-    return a * b
+    return a * b      # '*' = multiplication
 
 
 def diviser(a, b):
-    # On se protège de la division par zéro (qui ferait planter le programme).
+    # '==' compare deux valeurs (≠ du '=' qui RANGE dans une variable).
+    # On se protège de la division par zéro, qui ferait planter le programme.
     if b == 0:
         return "Erreur : on ne peut pas diviser par zéro."
-    return a / b
+    return a / b      # '/' = division
 
 
 # ─────────────────────────────────────────────
@@ -34,17 +39,22 @@ def diviser(a, b):
 # ─────────────────────────────────────────────
 print("🧮 Mini-calculatrice (tape 'q' pour quitter)")
 
-while True:                       # boucle "infinie"... jusqu'au 'break' plus bas
+# 'while True:' = boucle qui tourne INDÉFINIMENT... jusqu'à un 'break' (voir plus bas).
+while True:
+    # \n (en début de texte) ajoute une ligne vide avant la question, pour aérer.
     operation = input("\nOpération (+, -, *, / ou q) : ")
 
+    # Si l'utilisateur tape 'q', on sort de la boucle.
     if operation == "q":
         print("Au revoir ! 👋")
-        break                     # 'break' sort de la boucle while
+        break                 # 'break' = "casse" la boucle while et en sort
 
-    # input() renvoie du TEXTE : on convertit en float pour pouvoir calculer.
+    # input() renvoie TOUJOURS du texte. float(...) le convertit en nombre à virgule,
+    # sinon on ne pourrait pas calculer ("3" + "4" donnerait "34", pas 7).
     nombre1 = float(input("Premier nombre  : "))
     nombre2 = float(input("Deuxième nombre : "))
 
+    # Selon l'opération choisie, on appelle la bonne fonction.
     if operation == "+":
         resultat = additionner(nombre1, nombre2)
     elif operation == "-":

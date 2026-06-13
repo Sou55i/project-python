@@ -13,19 +13,23 @@ Dans la vraie vie, on remplacerait 'every(2).seconds' par 'every().day.at("08:00
 et on laisserait le programme tourner (ou on utiliserait cron / Planificateur Windows).
 """
 
-import time
-from datetime import datetime
+import time                        # 'time.sleep()' fait une PAUSE
+from datetime import datetime      # pour afficher l'heure courante
 
-import schedule
+import schedule                    # bibliothèque tierce de planification
 
-# Compteur global pour arrêter la démo après quelques tours.
+# Une variable GLOBALE (déclarée ici, en dehors de toute fonction).
+# Elle nous sert de compteur pour arrêter la démo après quelques tours.
 compteur = 0
 
 
 def ma_tache():
     """La tâche à répéter. Ici, elle affiche simplement l'heure."""
+    # 'global compteur' = "je veux MODIFIER la variable compteur du dessus,
+    # pas en créer une nouvelle locale à la fonction". Sans ça, le += planterait.
     global compteur
-    compteur += 1
+    compteur += 1                  # +1 à chaque exécution
+    # %H:%M:%S = heure:minute:seconde
     maintenant = datetime.now().strftime("%H:%M:%S")
     print(f"[{maintenant}] Tâche exécutée (fois n°{compteur}) ✅")
 
@@ -34,16 +38,19 @@ if __name__ == "__main__":
     print("⏱️  Planification : la tâche s'exécute toutes les 2 secondes.")
     print("    (la démo s'arrête après 3 répétitions)\n")
 
-    # On programme la répétition. Autres exemples possibles :
+    # On programme la répétition. Lecture quasi naturelle : "toutes les 2 secondes,
+    # FAIS ma_tache". Note : on écrit 'ma_tache' SANS les parenthèses, car on donne
+    # la fonction elle-même à schedule (il l'appellera lui-même au bon moment).
+    # Autres exemples possibles :
     #   schedule.every().hour.do(ma_tache)
     #   schedule.every().day.at("08:00").do(ma_tache)
     #   schedule.every().monday.do(ma_tache)
     schedule.every(2).seconds.do(ma_tache)
 
-    # La boucle qui fait vivre le planificateur : il vérifie en continu
-    # s'il est l'heure de lancer une tâche en attente.
-    while compteur < 3:
-        schedule.run_pending()   # lance les tâches dont l'heure est venue
-        time.sleep(1)            # petite pause pour ne pas surcharger le processeur
+    # Le planificateur ne "vit" que tant que ce programme tourne. Cette boucle
+    # le maintient en vie et lui demande régulièrement s'il a du travail.
+    while compteur < 3:            # on s'arrête une fois 3 exécutions atteintes
+        schedule.run_pending()     # lance les tâches dont l'heure est venue
+        time.sleep(1)              # pause d'1 seconde, pour ne pas saturer le processeur
 
     print("\n✅ Démo terminée.")
