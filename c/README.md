@@ -50,6 +50,14 @@ Autres différences notables avec Python :
 | 6 | [`06_preprocesseur_modules`](./06_preprocesseur_modules/) | Préprocesseur (`#define`, `#include` `<>` vs `""`), séparer en `.h`/`.c`, garde d'inclusion, compiler plusieurs fichiers ensemble |
 | 7 | [`07_debugger`](./07_debugger/) | Trouver/corriger les bugs : compiler avec `-g`/`-Wall`, erreurs fréquentes (segfault, tableau hors limites, fuite mémoire…), l'essentiel de `gdb` (`run`, `bt`, `break`, `print`…) et `valgrind` |
 
+### 🚀 Modules avancés
+
+À faire **une fois les fondations solides**. Plus exigeants, mais passionnants.
+
+| Étape | Module | Ce que tu apprends |
+|-------|--------|--------------------|
+| 8 | [`08_threads`](./08_threads/) | Programmation concurrente avec les **threads POSIX** (pthreads) : faire plusieurs choses en parallèle, lancer un thread (`pthread_create`) et l'attendre (`pthread_join`), le danger de la **course aux données**, et le **mutex** (`pthread_mutex_lock`/`unlock`) pour protéger une donnée partagée. Compilation avec `-pthread`. |
+
 > 🎯 **Et après les fondations ?** Le dossier [`projets/`](./projets/) rassemble des
 > **mini-projets « capstone »** qui combinent plusieurs modules (tableaux + structures +
 > fichiers) pour construire de vrais petits outils. À faire une fois les bases acquises.
