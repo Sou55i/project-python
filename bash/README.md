@@ -30,15 +30,32 @@ installation, traitement de fichiers en masse…).
 
 ---
 
-## 📚 Le parcours (fondations)
+## 📚 Le parcours
 
 | Étape | Module | Ce que tu apprends |
 |-------|--------|--------------------|
 | 0 | [`00_demarrer`](./00_demarrer/) | Le shell, le shebang, lancer un script, `echo`, les commentaires |
 | 1 | [`01_les_bases`](./01_les_bases/) | Variables & guillemets, `read`, conditions `[[ ]]`, boucles, fonctions, calcul |
+| 2 | [`02_fichiers`](./02_fichiers/) | Redirections (`>`, `>>`, `<`), pipes `|`, lire un fichier (`while read`), tests `-f`/`-d` |
+| 3 | [`03_texte`](./03_texte/) | Le super-pouvoir du shell : `grep`, `cut`, `sort`, `uniq`, `wc`, `sed`, `awk` |
+| 4 | [`04_arguments`](./04_arguments/) | Arguments & options : `$0`/`$1`/`$@`/`$#`, `shift`, `getopts` |
+| 5 | [`05_tableaux`](./05_tableaux/) | Tableaux indexés et associatifs (dictionnaires) |
+| 6 | [`06_robustesse`](./06_robustesse/) | `set -euo pipefail`, code de retour `$?`, `&&`/`||`, `trap` (nettoyage) |
+| 7 | [`07_debugger`](./07_debugger/) | Déboguer : `set -x` / `bash -x`, `shellcheck`, erreurs fréquentes |
 
-> 🚧 **Fondations** : ce parcours débute. D'autres modules (manipulation de fichiers,
-> arguments de script, projets…) viendront ensuite, dans le même style.
+### 🚀 Modules avancés
+
+| Étape | Module | Ce que tu apprends |
+|-------|--------|--------------------|
+| 8 | [`08_fonctions_avancees`](./08_fonctions_avancees/) | Variables `local`, `return`/`$?`, bibliothèques réutilisables avec `source` |
+| 9 | [`09_parallelisme`](./09_parallelisme/) | Lancer des tâches en parallèle : `&`, `wait`, `xargs -P` |
+
+Puis, pour mettre tout en pratique : le **[projet capstone](./projets/)** (ranger
+automatiquement des fichiers par extension), qui combine plusieurs modules.
+
+> 📎 **Ressources** (à garder sous la main) : l'[`AIDE_MEMOIRE.md`](./AIDE_MEMOIRE.md)
+> (cheat-sheet d'une page), le [`GLOSSAIRE.md`](./GLOSSAIRE.md) (les mots du Bash) et le guide
+> [`ANATOMIE_D_UN_SCRIPT.md`](./ANATOMIE_D_UN_SCRIPT.md) (dans quel ordre écrire un script).
 
 ---
 
