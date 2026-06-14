@@ -94,7 +94,9 @@ go build go/00_demarrer/premier_programme.go   # crée le fichier "premier_progr
 > modules (structs + slices + fichiers + erreurs) pour fabriquer de vrais petits outils.
 
 > 📎 **Ressources** (à garder sous la main) : l'[AIDE_MEMOIRE.md](./AIDE_MEMOIRE.md)
-> (cheat-sheet de syntaxe) et le [GLOSSAIRE.md](./GLOSSAIRE.md) (le sens des mots du Go).
+> (cheat-sheet de syntaxe), le [GLOSSAIRE.md](./GLOSSAIRE.md) (le sens des mots du Go) et
+> l'[ANATOMIE_D_UN_PROGRAMME.md](./ANATOMIE_D_UN_PROGRAMME.md) (dans quel ordre ranger le
+> code d'un fichier Go : `package`, imports, types, `func main()`…).
 
 ---
 
