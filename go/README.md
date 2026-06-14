@@ -83,6 +83,7 @@ go build go/00_demarrer/premier_programme.go   # crée le fichier "premier_progr
 | 3 | [`03_structs_methodes`](./03_structs_methodes/) | Structs (regrouper des champs), méthodes, récepteur valeur vs pointeur `*T` |
 | 4 | [`04_erreurs_interfaces`](./04_erreurs_interfaces/) | Gestion des erreurs (`error`, `if err != nil`), interfaces (contrats de comportement) |
 | 5 | [`05_fichiers`](./05_fichiers/) | Lire & écrire des fichiers (`os.WriteFile`, `os.ReadFile`, `os.Open` + `bufio.Scanner`) |
+| 6 | [`06_concurrence`](./06_concurrence/) | Concurrence : goroutines (`go`), synchronisation (`sync.WaitGroup`), channels (`chan`) |
 
 > 🚧 **Fondations.** D'autres modules (petits projets…) viendront
 > ensuite, dans le même style.
