@@ -8,6 +8,16 @@ Puis on exporte le tout en CSV et en Excel.
 Nécessite : pandas + openpyxl  (pip install -r requirements.txt)
 
 Lance-le :  python3 automatisation/05_donnees_rapports/rapport_ventes.py
+
+🗺️ CHEMINEMENT DU SCRIPT (les grandes étapes, dans l'ordre) :
+   1. IMPORTS    : pandas (manipulation de tableaux) + Path.
+   2. FONCTIONS  : - creer_donnees_demo() fabrique un faux fichier de ventes,
+                   - generer_rapport() fait tout le travail d'analyse :
+                       a) CHARGER le CSV,         b) CALCULER la colonne montant,
+                       c) CALCULER les totaux,    d) REGROUPER (groupby) par produit
+                                                     et par commercial,
+                       e) EXPORTER en CSV et Excel.
+   3. PROGRAMME  : le bloc __main__ crée les données PUIS génère le rapport.
 """
 
 from pathlib import Path

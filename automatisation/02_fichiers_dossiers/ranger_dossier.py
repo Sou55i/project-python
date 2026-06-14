@@ -10,6 +10,14 @@ rempli de fichiers vides, puis le range. Adapte ensuite 'dossier_a_ranger'
 vers ton vrai dossier quand tu te sens prêt.
 
 Lance-le :  python3 automatisation/02_fichiers_dossiers/ranger_dossier.py
+
+🗺️ CHEMINEMENT DU SCRIPT (les grandes étapes, dans l'ordre) :
+   1. IMPORTS      : on charge l'outil Path (gestion des chemins de fichiers).
+   2. CONSTANTE    : RANGEMENT, le tableau qui associe une extension -> un dossier.
+   3. FONCTIONS    : - preparer_dossier_de_test() crée un faux dossier de démo,
+                     - ranger() parcourt les fichiers et les déplace au bon endroit.
+   4. PROGRAMME    : le bloc __main__ prépare la démo PUIS appelle ranger().
+   (Pour comprendre : commence par lire le bloc __main__ tout en bas.)
 """
 
 from pathlib import Path

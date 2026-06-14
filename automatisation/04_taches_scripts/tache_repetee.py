@@ -11,6 +11,12 @@ Lance-le :  python3 automatisation/04_taches_scripts/tache_repetee.py
 
 Dans la vraie vie, on remplacerait 'every(2).seconds' par 'every().day.at("08:00")'
 et on laisserait le programme tourner (ou on utiliserait cron / Planificateur Windows).
+
+🗺️ CHEMINEMENT DU SCRIPT (les grandes étapes, dans l'ordre) :
+   1. IMPORTS   : time, datetime, et la bibliothèque schedule.
+   2. FONCTION  : ma_tache() = l'action qu'on veut répéter.
+   3. PROGRAMME : le bloc __main__ (a) programme la répétition,
+                  (b) lance une boucle qui "fait vivre" le planificateur.
 """
 
 import time                        # 'time.sleep()' fait une PAUSE

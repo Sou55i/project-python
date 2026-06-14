@@ -7,6 +7,13 @@ Ce script montre, depuis Python, comment savoir :
   - quoi faire quand une bibliothèque manque.
 
 Lance-le :  python3 automatisation/06_bibliotheques/explorer_modules.py
+
+🗺️ CHEMINEMENT DU SCRIPT (les grandes étapes, dans l'ordre) :
+   1. IMPORT    : importlib (outil pour inspecter les modules disponibles).
+   2. FONCTION  : est_installe() dit si un module est présent (True/False).
+   3. ÉTAPE 1   : on teste une liste de modules (stdlib + tierces).
+   4. ÉTAPE 2   : on affiche la VERSION installée de quelques bibliothèques.
+   5. ÉTAPE 3   : rappel de la marche à suivre en cas de ModuleNotFoundError.
 """
 
 # 'importlib.util' fait partie de la bibliothèque STANDARD.

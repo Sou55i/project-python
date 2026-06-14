@@ -11,6 +11,14 @@ Exemples :
     python3 automatisation/04_taches_scripts/sauvegarde.py --source mes_docs
 
 Concepts : argparse, logging, pathlib, shutil, et le bloc __main__.
+
+🗺️ CHEMINEMENT DU SCRIPT (les grandes étapes, dans l'ordre) :
+   1. IMPORTS    : argparse, logging, shutil, datetime, pathlib.
+   2. CONFIG     : on règle l'affichage des logs (messages horodatés).
+   3. FONCTIONS  : - preparer_demo()  crée un dossier source de démo,
+                   - sauvegarder()    copie la source dans un dossier daté,
+                   - lire_options()   lit les options --source / --destination.
+   4. PROGRAMME  : le bloc __main__ lit les options PUIS lance la sauvegarde.
 """
 
 import argparse                    # gérer les options de la ligne de commande
