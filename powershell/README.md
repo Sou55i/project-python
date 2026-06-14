@@ -35,15 +35,32 @@ Autre particularité : les commandes s'appellent des **cmdlets** et suivent touj
 
 ---
 
-## 📚 Le parcours (fondations)
+## 📚 Le parcours
 
 | Étape | Module | Ce que tu apprends |
 |-------|--------|--------------------|
 | 0 | [`00_demarrer`](./00_demarrer/) | Lancer un script `.ps1`, les cmdlets, `Write-Host`, les commentaires |
 | 1 | [`01_les_bases`](./01_les_bases/) | Variables, types, `Read-Host`, conditions, boucles, fonctions |
+| 2 | [`02_fichiers`](./02_fichiers/) | Lire/écrire des fichiers : `Get-Content`, `Set-Content`, `Test-Path` |
+| 3 | [`03_pipeline_objets`](./03_pipeline_objets/) | **Le point fort** : le pipeline d'**objets** (`Where-Object`, `Select-Object`, `Sort-Object`…) |
+| 4 | [`04_parametres`](./04_parametres/) | Rendre un script réutilisable avec `param( )` (paramètres typés, obligatoires) |
+| 5 | [`05_collections`](./05_collections/) | Tableaux `@( )` et tables de hachage `@{ }` (dictionnaires) |
+| 6 | [`06_robustesse`](./06_robustesse/) | Gérer les erreurs : `try`/`catch`/`finally`, `-ErrorAction Stop`, `throw` |
+| 7 | [`07_debugger`](./07_debugger/) | Déboguer : `Set-PSDebug -Trace`, `Write-Debug`, erreurs fréquentes |
 
-> 🚧 **Fondations** : ce parcours débute. D'autres modules (fichiers, pipeline & objets,
-> projets…) viendront ensuite, dans le même style.
+### 🚀 Modules avancés
+
+| Étape | Module | Ce que tu apprends |
+|-------|--------|--------------------|
+| 8 | [`08_modules`](./08_modules/) | Réutiliser du code : modules `.psm1`, `Import-Module`, `Export-ModuleMember` |
+| 9 | [`09_parallelisme`](./09_parallelisme/) | Paralléliser : `ForEach-Object -Parallel`, `Start-Job`/`Wait-Job` |
+
+Puis, pour pratiquer : le **[projet capstone](./projets/)** (ranger des fichiers par
+extension), qui combine plusieurs modules.
+
+> 📎 **Ressources** : l'[`AIDE_MEMOIRE.md`](./AIDE_MEMOIRE.md) (cheat-sheet),
+> le [`GLOSSAIRE.md`](./GLOSSAIRE.md) (les mots de PowerShell) et le guide
+> [`ANATOMIE_D_UN_SCRIPT.md`](./ANATOMIE_D_UN_SCRIPT.md) (dans quel ordre écrire un script).
 
 ---
 
