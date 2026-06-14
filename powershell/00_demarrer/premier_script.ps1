@@ -6,8 +6,8 @@
    Pour le lancer, ouvre un terminal et tape :
        pwsh powershell/00_demarrer/premier_script.ps1
 
-   Les commentaires sont ignorés par PowerShell : sur une ligne avec #,
-   ou sur plusieurs lignes entre <# et #> (comme ce bloc).
+   Les commentaires sont ignorés par PowerShell : une ligne commence par #,
+   et un bloc de plusieurs lignes est entouré des marqueurs de bloc (comme ici).
 #>
 
 # Write-Host affiche du texte à l'écran. Mets-le entre guillemets doubles "...".
