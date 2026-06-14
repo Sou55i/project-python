@@ -65,9 +65,10 @@ Autres différences avec Python (héritées du C) :
 | 0 | [`00_demarrer`](./00_demarrer/) | Compiler/exécuter, structure d'un programme C++, `std::cout` |
 | 1 | [`01_les_bases`](./01_les_bases/) | Types, variables, `std::cout`/`std::cin`, conditions, boucles, fonctions |
 | 2 | [`02_conteneurs_chaines`](./02_conteneurs_chaines/) | `std::string` (texte), `std::vector` (liste qui grandit), boucle range-for |
+| 3 | [`03_classes_objets`](./03_classes_objets/) | Programmation objet : classes & objets, attributs/méthodes, constructeur, `public`/`private` (encapsulation) |
 
-> 🚧 **Fondations** : ce parcours débute. D'autres modules (objets & classes, fichiers,
-> projets…) viendront ensuite, dans le même style.
+> 🚧 **Fondations** : ce parcours débute. D'autres modules (fichiers, projets…) viendront
+> ensuite, dans le même style.
 
 ---
 
