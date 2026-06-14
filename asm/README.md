@@ -127,6 +127,16 @@ as asm/00_demarrer/hello.s -o /tmp/p.o && ld /tmp/p.o -o /tmp/p && /tmp/p ; echo
 > 🚧 **Fondations** : ce parcours pose les bases. D'autres modules (calculs avancés,
 > autres conventions d'appel…) viendront ensuite, dans le même style.
 
+## 🛠️ Mini-projets
+
+Une fois les modules digérés, passe au dossier [`projets/`](./projets/) : des **programmes
+complets** qui combinent plusieurs modules à la fois (boucle + conversion de nombres +
+affichage de chaînes). C'est là qu'on relie enfin toutes les briques apprises.
+
+| Projet | Ce qu'il fait | Modules combinés |
+|--------|---------------|------------------|
+| [`projets/table_multiplication.s`](./projets/table_multiplication.s) | Affiche la table de multiplication d'un nombre (`7 x 1 = 7` ... `7 x 10 = 70`) | 01/02, 04, 05 |
+
 ## 📎 Ressources
 
 - [`AIDE_MEMOIRE.md`](./AIDE_MEMOIRE.md) — l'essentiel en une page (outils, registres, instructions, syscalls, squelette).
