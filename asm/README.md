@@ -119,9 +119,10 @@ as asm/00_demarrer/hello.s -o /tmp/p.o && ld /tmp/p.o -o /tmp/p && /tmp/p ; echo
 | 1 | [`01_les_bases`](./01_les_bases/) | Registres, `mov`, `add`/`sub`, `cmp`, sauts (`jmp`/`jl`/`jne`), labels, code de sortie |
 | 2 | [`02_pile_fonctions`](./02_pile_fonctions/) | La pile (`push`/`pop`, `rsp`), fonctions/sous-programmes (`call`/`ret`), passer un argument et récupérer un résultat |
 | 3 | [`03_memoire_donnees`](./03_memoire_donnees/) | Sections `.data`/`.bss`, déclarer des données (`.byte`/`.word`/`.quad`/`.ascii`), adressage `[ ]` et `lea`, parcourir un tableau |
+| 4 | [`04_entrees_sorties`](./04_entrees_sorties/) | Syscalls `read`/`write`, afficher un nombre (conversion par divisions), écho clavier |
 
 > 🚧 **Fondations** : ce parcours pose les bases. D'autres modules (chaînes de caractères,
-> affichage de nombres…) viendront ensuite, dans le même style.
+> calculs avancés…) viendront ensuite, dans le même style.
 
 ## 📎 Ressources
 
