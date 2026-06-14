@@ -66,6 +66,7 @@ Autres différences avec Python (héritées du C) :
 | 1 | [`01_les_bases`](./01_les_bases/) | Types, variables, `std::cout`/`std::cin`, conditions, boucles, fonctions |
 | 2 | [`02_conteneurs_chaines`](./02_conteneurs_chaines/) | `std::string` (texte), `std::vector` (liste qui grandit), boucle range-for |
 | 3 | [`03_classes_objets`](./03_classes_objets/) | Programmation objet : classes & objets, attributs/méthodes, constructeur, `public`/`private` (encapsulation) |
+| 4 | [`04_heritage_polymorphisme`](./04_heritage_polymorphisme/) | Héritage (`: public`), méthodes `virtual`/`override`, polymorphisme via `Animal*` |
 
 > 🚧 **Fondations** : ce parcours débute. D'autres modules (fichiers, projets…) viendront
 > ensuite, dans le même style.
