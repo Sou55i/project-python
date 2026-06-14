@@ -50,8 +50,9 @@ Autres différences notables avec Python :
 | 6 | [`06_preprocesseur_modules`](./06_preprocesseur_modules/) | Préprocesseur (`#define`, `#include` `<>` vs `""`), séparer en `.h`/`.c`, garde d'inclusion, compiler plusieurs fichiers ensemble |
 | 7 | [`07_debugger`](./07_debugger/) | Trouver/corriger les bugs : compiler avec `-g`/`-Wall`, erreurs fréquentes (segfault, tableau hors limites, fuite mémoire…), l'essentiel de `gdb` (`run`, `bt`, `break`, `print`…) et `valgrind` |
 
-> 🚧 D'autres modules (projets…)
-> viendront ensuite, dans le même style.
+> 🎯 **Et après les fondations ?** Le dossier [`projets/`](./projets/) rassemble des
+> **mini-projets « capstone »** qui combinent plusieurs modules (tableaux + structures +
+> fichiers) pour construire de vrais petits outils. À faire une fois les bases acquises.
 
 > 📎 **Ressources** (à garder sous la main) : l'[`AIDE_MEMOIRE.md`](./AIDE_MEMOIRE.md)
 > (cheat-sheet d'une page) et le [`GLOSSAIRE.md`](./GLOSSAIRE.md) (les mots du C expliqués).
