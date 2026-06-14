@@ -30,6 +30,16 @@ une énorme bibliothèque d'outils tout prêts.
 | [04_taches_scripts](./04_taches_scripts/) | Arguments, planification (cron) | Un script de sauvegarde planifié |
 | [05_donnees_rapports](./05_donnees_rapports/) | Tableaux de données, agrégation | Un rapport de ventes automatique |
 | [06_bibliotheques](./06_bibliotheques/) | Stdlib vs tierces, pip, requirements | Explorer les modules installés |
+| [07_debugger](./07_debugger/) | Lire un traceback, erreurs fréquentes, try/except | Démo des erreurs courantes |
+
+Puis, pour mettre tout en pratique : les **[mini-projets concrets](./projets/)** qui
+combinent plusieurs modules (organiser des fichiers, carnet de contacts, suivi météo).
+
+## 📎 Ressources transverses (à garder sous la main)
+
+- **[AIDE_MEMOIRE.md](./AIDE_MEMOIRE.md)** — la syntaxe Python essentielle sur une page.
+- **[GLOSSAIRE.md](./GLOSSAIRE.md)** — tous les mots de Python expliqués simplement.
+- **[ANATOMIE_D_UN_SCRIPT.md](./ANATOMIE_D_UN_SCRIPT.md)** — dans quel ordre écrire son code.
 
 ## 🧭 Comprendre la structure d'un script
 
