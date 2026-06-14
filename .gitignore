@@ -128,5 +128,17 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# Fichiers de démo générés par les scripts d'automatisation (recréés à l'exécution)
-automatisation/**/exemples/
+# Fichiers de démo générés par les scripts (recréés à l'exécution)
+**/exemples/
+
+# Binaires compilés (C, C++, Go, Asm) — on ne versionne que le code source
+*.o
+*.out
+a.out
+build/
+bin/
+# Exécutables compilés dans les dossiers de cours (sans extension)
+c/**/build/
+cpp/**/build/
+go/**/build/
+asm/**/build/

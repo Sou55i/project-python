@@ -1,0 +1,20 @@
+# ============================================================
+#  Dépendances du dépôt d'apprentissage Python
+#  Installe tout d'un coup avec :  pip install -r python/requirements.txt
+# ============================================================
+
+# --- Parcours AUTOMATISATION (débutant) ---
+requests>=2.31.0        # Télécharger des pages / appeler des APIs (module 03)
+beautifulsoup4>=4.12.0  # Lire et extraire des infos d'une page HTML (module 03)
+pandas>=2.0.0           # Manipuler des tableaux de données (module 05)
+openpyxl>=3.1.0         # Lire / écrire des fichiers Excel .xlsx (modules 02 et 05)
+schedule>=1.2.0         # Planifier des tâches répétées en pur Python (module 04)
+
+# --- Parcours PENTEST / Sécurité (avancé) ---
+dnspython>=2.4.0        # Résolution DNS avancée (pentest/04_recon)
+PyJWT>=2.8.0            # Analyse et génération de JWT (pentest/06_crypto)
+
+# --- Optionnel (à décommenter au besoin) ---
+# tqdm>=4.66.0          # Barres de progression
+# scapy>=2.5.0          # Manipulation de paquets réseau (nécessite root)
+# impacket>=0.11.0      # Protocoles Windows (SMB, NTLM, Kerberos)
