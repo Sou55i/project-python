@@ -135,6 +135,7 @@ notions à la fois. Toujours la même pédagogie : on explique d'abord, on code 
 | Module | Ce que tu apprends |
 |--------|--------------------|
 | [`08_recursion`](./08_recursion/) | La **récursion** (une fonction qui s'appelle elle-même) et le rôle crucial de la **pile** : sauvegarder (`push`) / restaurer (`pop`) ses valeurs autour de l'appel récursif. Exemple : `factorielle(5) = 120` |
+| [`09_operations_bits`](./09_operations_bits/) | Les **opérations bit à bit** et les **masques** : un nombre vu comme une suite de **bits** (0/1), `and` (masque), `or` (allumer), `xor` (inverser/comparer), `not`, et les décalages `shl`/`shr` (multiplier/diviser par 2). Exemple : `12 AND 10`, puis `OR`/`XOR`/`SHL` → `20` |
 
 ## 🛠️ Mini-projets
 
