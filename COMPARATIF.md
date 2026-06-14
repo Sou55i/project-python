@@ -1,11 +1,11 @@
-# 🔬 La même chose dans 6 langages
+# 🔬 La même chose dans 7 langages
 
 Le meilleur moyen de comprendre la programmation **en général** (et pas juste un langage),
 c'est de voir **le même concept** écrit dans plusieurs langages. Tu remarqueras que les
 **idées** sont identiques — seule la **façon de l'écrire** (la syntaxe) change.
 
 > Les langages sont rangés du plus haut niveau (proche de l'humain) au plus bas niveau
-> (proche de la machine) : **Python → Bash → Go → C++ → C → Assembleur**.
+> (proche de la machine) : **Python → Bash → PowerShell → Go → C++ → C → Assembleur**.
 > L'assembleur étant très différent, certaines cases indiquent « concept géré autrement ».
 
 ---
@@ -16,6 +16,7 @@ c'est de voir **le même concept** écrit dans plusieurs langages. Tu remarquera
 |---------|----------|
 | 🐍 Python | `python3 fichier.py` (interprété, pas de compilation) |
 | 🐚 Bash | `bash fichier.sh` (interprété, pas de compilation) |
+| 🟦 PowerShell | `pwsh fichier.ps1` (interprété, pas de compilation) |
 | 🐹 Go | `go run fichier.go` (compile + exécute) |
 | ➕ C++ | `g++ fichier.cpp -o prog && ./prog` |
 | 🇨 C | `gcc fichier.c -o prog && ./prog` |
@@ -35,6 +36,10 @@ print("Bonjour")
 **Bash**
 ```bash
 echo "Bonjour"
+```
+**PowerShell**
+```powershell
+Write-Host "Bonjour"
 ```
 **Go**
 ```go
@@ -81,6 +86,7 @@ _start:
 |---------|------|----------|
 | Python | `age = 30` | type **deviné** automatiquement |
 | Bash | `age=30` | ⚠️ **aucun espace** autour du `=` ; utilisé via `"$age"` |
+| PowerShell | `$age = 30` | le nom commence par `$` ; utilisé via `"$age"` |
 | Go | `age := 30` | type deviné, mais **statique** |
 | C++ | `int age = 30;` | type **déclaré** + `;` |
 | C | `int age = 30;` | type **déclaré** + `;` |
@@ -104,6 +110,14 @@ if [[ $note -ge 10 ]]; then
 else
     echo "Recale"
 fi
+```
+**PowerShell** (comparaison avec `-ge`, jamais `>=`)
+```powershell
+if ($note -ge 10) {
+    Write-Host "Recu"
+} else {
+    Write-Host "Recale"
+}
 ```
 **Go**
 ```go
@@ -141,6 +155,7 @@ recale:
 |---------|------|
 | Python | `for i in range(3):` |
 | Bash | `for i in {1..3}; do ... done` |
+| PowerShell | `for ($i = 0; $i -lt 3; $i++) { }` |
 | Go | `for i := 0; i < 3; i++ {` |
 | C / C++ | `for (int i = 0; i < 3; i++) {` |
 | Asm | un **label** + un compteur + un **saut conditionnel** (voir `asm/01_les_bases/boucle.s`) |
@@ -161,6 +176,13 @@ def add(a, b):
 ```bash
 add() {
     echo $(( $1 + $2 ))
+}
+```
+**PowerShell**
+```powershell
+function Add-Numbers {
+    param([int]$a, [int]$b)
+    return $a + $b
 }
 ```
 **Go**
@@ -195,6 +217,7 @@ add:
 |---------|-----------|------------------|
 | Python | `# ...` | `""" ... """` |
 | Bash | `# ...` | (ligne par ligne) |
+| PowerShell | `# ...` | `<# ... #>` |
 | Go / C++ / C | `// ...` | `/* ... */` |
 | Asm | `# ...` | (ligne par ligne) |
 
@@ -202,14 +225,14 @@ add:
 
 ## 7. Ce qui change vraiment d'un langage à l'autre
 
-| Critère | Python | Bash | Go | C++ | C | Asm |
-|---------|--------|------|----|-----|---|-----|
-| Compilation | non (interprété) | non (interprété) | oui | oui | oui | oui (assemblage) |
-| Typage | dynamique | faible (tout est texte) | statique | statique | statique | registres |
-| Gestion mémoire | automatique | automatique | automatique | manuelle/outillée | **manuelle** | **totale (toi)** |
-| Niveau | très haut | haut (scripts) | haut | moyen | bas | **le plus bas** |
-| Facilité débutant | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐ | ⭐ |
-| Point fort | données, web | **automatiser le terminal** | serveurs, outils | logiciels exigeants | système | matériel |
+| Critère | Python | Bash | PowerShell | Go | C++ | C | Asm |
+|---------|--------|------|-----------|----|-----|---|-----|
+| Compilation | non (interprété) | non (interprété) | non (interprété) | oui | oui | oui | oui (assemblage) |
+| Typage | dynamique | faible (tout est texte) | dynamique (objets) | statique | statique | statique | registres |
+| Gestion mémoire | automatique | automatique | automatique | automatique | manuelle/outillée | **manuelle** | **totale (toi)** |
+| Niveau | très haut | haut (scripts) | haut (scripts) | haut | moyen | bas | **le plus bas** |
+| Facilité débutant | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐ | ⭐ |
+| Point fort | données, web | **automatiser le terminal** | **administrer Windows**, objets | serveurs, outils | logiciels exigeants | système | matériel |
 
 ---
 

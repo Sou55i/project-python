@@ -103,5 +103,25 @@ jobs:
           done < <(find bash -name '*.sh')
           echo "::endgroup::"
 
+      # --- PowerShell : on demande au parseur PowerShell de valider chaque .ps1 ---
+      # pwsh est préinstallé sur les runners ubuntu-latest. On ne lance pas les
+      # scripts (ils peuvent attendre une saisie) : on vérifie juste leur SYNTAXE.
+      - name: Vérifier le PowerShell
+        shell: pwsh
+        run: |
+          $erreurTotale = 0
+          Get-ChildItem -Path powershell -Recurse -Filter *.ps1 | ForEach-Object {
+            $errors = $null
+            [System.Management.Automation.Language.Parser]::ParseFile($_.FullName, [ref]$null, [ref]$errors) | Out-Null
+            if ($errors.Count -gt 0) {
+              Write-Host "FAIL $($_.FullName)"
+              $errors | ForEach-Object { Write-Host "   $($_.Message)" }
+              $erreurTotale += $errors.Count
+            } else {
+              Write-Host "OK   $($_.FullName)"
+            }
+          }
+          if ($erreurTotale -gt 0) { exit 1 }
+
       - name: Tout est vert ✅
-        run: echo "Tous les exemples des 5 langages compilent / s'assemblent correctement."
+        run: echo "Tous les exemples (Python, Bash, C, C++, Go, Asm, PowerShell) sont valides."
