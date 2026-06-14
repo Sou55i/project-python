@@ -20,7 +20,7 @@ la même pédagogie** :
 |---------|---------|-----------------|------|
 | 🐍 **Python** | [`python/`](./python/) | Automatisation, scripts, données, web. **Idéal pour débuter.** | ✅ Complet |
 | 🐚 **Bash** | [`bash/`](./bash/) | Le langage du terminal : automatiser des tâches et piloter des outils. | ✅ 00→09 |
-| 🟦 **PowerShell** | [`powershell/`](./powershell/) | Terminal + scripts orientés objets (Windows et multiplateforme). | 🚧 Fondations |
+| 🟦 **PowerShell** | [`powershell/`](./powershell/) | Terminal + scripts orientés objets (Windows et multiplateforme). | ✅ 00→09 |
 | 🇨 **C** | [`c/`](./c/) | Le langage « bas niveau » fondateur, proche de la machine. | ✅ 00→09 |
 | ➕ **C++** | [`cpp/`](./cpp/) | C + objets et outils modernes (STL). | ✅ 00→09 |
 | 🐹 **Go** | [`go/`](./go/) | Langage moderne, simple, rapide à compiler. | ✅ 00→09 |
