@@ -86,6 +86,17 @@ go build go/00_demarrer/premier_programme.go   # crée le fichier "premier_progr
 | 6 | [`06_concurrence`](./06_concurrence/) | Concurrence : goroutines (`go`), synchronisation (`sync.WaitGroup`), channels (`chan`) |
 | 7 | [`07_debugger`](./07_debugger/) | Débugger : lire une stack trace, bugs fréquents, `panic`/`recover`, `go vet`, `delve` |
 
+### 🚀 Modules avancés
+
+Une fois les fondations solides, va plus loin :
+
+| Étape | Module | Ce que tu apprends |
+|-------|--------|--------------------|
+| 8 | [`08_generics`](./08_generics/) | Les génériques : écrire UNE fonction pour plusieurs types (`[T any]`), les contraintes (`any`, `comparable`, contrainte perso `~int \| ~float64`) |
+
+> 💡 Comme pour les fondations : chaque fichier `.go` a son propre `package main` + `func main`
+> dans le même dossier, et se lance **séparément** avec `go run go/08_generics/<fichier>.go`.
+
 > 🚧 **Fondations.** D'autres modules (petits projets…) viendront
 > ensuite, dans le même style.
 
