@@ -81,8 +81,9 @@ go build go/00_demarrer/premier_programme.go   # crée le fichier "premier_progr
 | 1 | [`01_les_bases`](./01_les_bases/) | Types, variables, `fmt.Printf`, conditions, boucle `for`, fonctions |
 | 2 | [`02_collections`](./02_collections/) | Slices (listes dynamiques, `append`, `range`), maps (dictionnaires), package `strings` |
 | 3 | [`03_structs_methodes`](./03_structs_methodes/) | Structs (regrouper des champs), méthodes, récepteur valeur vs pointeur `*T` |
+| 4 | [`04_erreurs_interfaces`](./04_erreurs_interfaces/) | Gestion des erreurs (`error`, `if err != nil`), interfaces (contrats de comportement) |
 
-> 🚧 **Fondations.** D'autres modules (gestion des erreurs, petits projets…) viendront
+> 🚧 **Fondations.** D'autres modules (fichiers, petits projets…) viendront
 > ensuite, dans le même style.
 
 > 📎 **Ressources** (à garder sous la main) : l'[AIDE_MEMOIRE.md](./AIDE_MEMOIRE.md)
