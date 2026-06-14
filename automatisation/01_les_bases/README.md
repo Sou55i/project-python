@@ -173,13 +173,7 @@ Le dictionnaire est parfait pour décrire **un objet avec plusieurs caractérist
 ```bash
 python3 automatisation/01_les_bases/bases.py
 python3 automatisation/01_les_bases/mini_calculatrice.py
-python3 automatisation/01_les_bases/note_avec_input.py
 ```
-
-> 🆘 Tu as voulu ajouter un `input()` aux conditions et ça plante ? C'est l'erreur la plus
-> courante des débutants (l'ordre des lignes + `input()` qui renvoie du texte).
-> Le script **`note_avec_input.py`** te montre les 2 pièges et la solution, et le guide
-> **[ANATOMIE_D_UN_SCRIPT.md](../ANATOMIE_D_UN_SCRIPT.md)** (section 4) les explique en détail.
 
 Lis les deux fichiers, puis **modifie-les** : ajoute une opération à la calculatrice,
 change les conditions, crée ta propre fonction.

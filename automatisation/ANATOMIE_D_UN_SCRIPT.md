@@ -86,71 +86,7 @@ bloc est mal placé.
 
 ---
 
-## 4. ⚠️ Le piège classique : l'ordre d'exécution (ton exemple `note`)
-
-Voici **exactement** le code que tu as essayé :
-
-```python
-# ❌ NE MARCHE PAS
-if note >= 16:
-    print("Très bien")
-elif note >= 10:
-    print("Passable")
-else:
-    print("c'est nul")
-
-note = input("donne ta note: ")   # ← la note est créée TROP TARD, et c'est du texte
-```
-
-Il y a **deux bugs**, et c'est très formateur de les comprendre :
-
-### Bug n°1 — la variable est utilisée AVANT d'exister
-
-Python lit de haut en bas. Quand il arrive sur `if note >= 16`, la ligne
-`note = input(...)` est **plus bas** : `note` n'existe pas encore → erreur
-`NameError: name 'note' is not defined`.
-
-➡️ **Solution : on demande la note D'ABORD** (phase « entrée »), puis on teste
-(phase « traitement »). On remonte donc la ligne `input` **au-dessus** du `if`.
-
-### Bug n°2 — `input()` renvoie toujours du TEXTE
-
-Même en remontant la ligne, ça plante encore. Pourquoi ? Parce que **`input()` renvoie
-toujours une chaîne de caractères** (du texte), jamais un nombre. Or on ne peut pas
-comparer du texte avec un nombre : `"15" >= 16` provoque une erreur
-`TypeError: '>=' not supported between 'str' and 'int'`.
-
-➡️ **Solution : convertir le texte en nombre avec `int(...)`** (ou `float(...)` pour les
-décimaux).
-
-### ✅ La version qui marche
-
-```python
-# 1. ENTRÉE : on demande la note, et on la convertit en nombre entier.
-note = int(input("donne ta note: "))
-
-# 2. TRAITEMENT : maintenant que 'note' existe ET est un nombre, on peut tester.
-if note >= 16:
-    print("Très bien")
-elif note >= 10:
-    print("Passable")
-else:
-    print("c'est nul")
-```
-
-Tu peux lancer cette version commentée pas à pas :
-
-```bash
-python3 automatisation/01_les_bases/note_avec_input.py
-```
-
-> 🧠 À retenir pour TOUT input :
-> 1. Place le `input()` **avant** d'utiliser la variable.
-> 2. Si tu veux comparer ou calculer, **convertis** : `int(input(...))` ou `float(input(...))`.
-
----
-
-## 5. Comment lire un script complexe qu'on découvre
+## 4. Comment lire un script complexe qu'on découvre
 
 Quand un script te paraît compliqué, ne le lis pas bêtement de haut en bas. Fais ainsi :
 
@@ -166,7 +102,7 @@ Quand un script te paraît compliqué, ne le lis pas bêtement de haut en bas. F
 
 ---
 
-## 6. Récapitulatif visuel
+## 5. Récapitulatif visuel
 
 ```
 ┌─────────────────────────────────────────────┐
