@@ -43,9 +43,13 @@ Autres différences notables avec Python :
 |-------|--------|--------------------|
 | 0 | [`00_demarrer`](./00_demarrer/) | Compiler/exécuter, structure d'un programme C, `printf` |
 | 1 | [`01_les_bases`](./01_les_bases/) | Types, variables, `printf`/`scanf`, conditions, boucles, fonctions |
+| 2 | [`02_tableaux_chaines`](./02_tableaux_chaines/) | Tableaux (indices, parcours, somme/moyenne), chaînes (`'\0'`, `<string.h>`) |
 
-> 🚧 D'autres modules (tableaux & chaînes, pointeurs & mémoire, fichiers, projets…)
+> 🚧 D'autres modules (pointeurs & mémoire, fichiers, projets…)
 > viendront ensuite, dans le même style.
+
+> 📎 **Ressources** (à garder sous la main) : l'[`AIDE_MEMOIRE.md`](./AIDE_MEMOIRE.md)
+> (cheat-sheet d'une page) et le [`GLOSSAIRE.md`](./GLOSSAIRE.md) (les mots du C expliqués).
 
 ---
 
