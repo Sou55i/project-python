@@ -72,6 +72,10 @@ python3 automatisation/00_demarrer/premier_script.py
 | 4 | `04_taches_scripts` | Créer des scripts réutilisables et les planifier (cron / Windows) |
 | 5 | `05_donnees_rapports` | Nettoyer des données et générer des rapports automatiques (pandas) |
 | 6 | `06_bibliotheques` | Savoir quelle bibliothèque ajouter, quand, et comment (`pip`) |
+| 7 | `07_debugger` | Lire les messages d'erreur et corriger les bugs sereinement |
+| 🛠️ | `projets/` | Mini-projets concrets qui combinent plusieurs modules |
+
+📎 Ressources : [aide-mémoire](./automatisation/AIDE_MEMOIRE.md) · [glossaire](./automatisation/GLOSSAIRE.md) · [anatomie d'un script](./automatisation/ANATOMIE_D_UN_SCRIPT.md)
 
 👉 **Suis les modules dans l'ordre.** Chaque module suppose que tu as compris le précédent.
 
