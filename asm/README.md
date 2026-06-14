@@ -127,6 +127,15 @@ as asm/00_demarrer/hello.s -o /tmp/p.o && ld /tmp/p.o -o /tmp/p && /tmp/p ; echo
 > 🚧 **Fondations** : ce parcours pose les bases. D'autres modules (calculs avancés,
 > autres conventions d'appel…) viendront ensuite, dans le même style.
 
+## 🚀 Modules avancés
+
+Une fois les **fondations** acquises, ces modules vont plus loin en combinant plusieurs
+notions à la fois. Toujours la même pédagogie : on explique d'abord, on code ensuite.
+
+| Module | Ce que tu apprends |
+|--------|--------------------|
+| [`08_recursion`](./08_recursion/) | La **récursion** (une fonction qui s'appelle elle-même) et le rôle crucial de la **pile** : sauvegarder (`push`) / restaurer (`pop`) ses valeurs autour de l'appel récursif. Exemple : `factorielle(5) = 120` |
+
 ## 🛠️ Mini-projets
 
 Une fois les modules digérés, passe au dossier [`projets/`](./projets/) : des **programmes

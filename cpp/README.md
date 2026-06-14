@@ -74,6 +74,15 @@ Autres différences avec Python (héritées du C) :
 > 🚧 **Fondations** : ce parcours débute. D'autres modules (projets…) viendront ensuite,
 > dans le même style.
 
+## 🚀 Modules avancés
+
+Une fois les fondations digérées, ces modules vont plus loin — toujours dans le même style
+(théorie d'abord, code commenté ensuite).
+
+| Module | Ce que tu apprends |
+|--------|--------------------|
+| [`08_templates`](./08_templates/) | Les **templates** (généricité) : écrire du code qui marche pour plusieurs types. `template<typename T>`, fonction générique (`maximum<T>`), classe générique (`Boite<T>`). C'est ce qui se cache derrière les `< >` de la STL. |
+
 ### 🛠️ Et pour mettre tout ça en pratique : [`projets/`](./projets/)
 
 Une fois les fondations en place, le dossier [`projets/`](./projets/) propose des
