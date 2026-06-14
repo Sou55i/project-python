@@ -79,9 +79,13 @@ go build go/00_demarrer/premier_programme.go   # crée le fichier "premier_progr
 |-------|--------|--------------------|
 | 0 | [`00_demarrer`](./00_demarrer/) | Lancer un programme Go, structure minimale, `fmt.Println` |
 | 1 | [`01_les_bases`](./01_les_bases/) | Types, variables, `fmt.Printf`, conditions, boucle `for`, fonctions |
+| 2 | [`02_collections`](./02_collections/) | Slices (listes dynamiques, `append`, `range`), maps (dictionnaires), package `strings` |
 
-> 🚧 **Fondations.** D'autres modules (tableaux & slices, maps, structures, gestion des
-> erreurs, projets…) viendront ensuite, dans le même style.
+> 🚧 **Fondations.** D'autres modules (structures, gestion des erreurs, projets…) viendront
+> ensuite, dans le même style.
+
+> 📎 **Ressources** (à garder sous la main) : l'[AIDE_MEMOIRE.md](./AIDE_MEMOIRE.md)
+> (cheat-sheet de syntaxe) et le [GLOSSAIRE.md](./GLOSSAIRE.md) (le sens des mots du Go).
 
 ---
 
