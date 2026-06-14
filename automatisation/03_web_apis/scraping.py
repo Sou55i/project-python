@@ -8,6 +8,14 @@ Nécessite : connexion Internet + 'requests' et 'beautifulsoup4'
             (pip install -r requirements.txt)
 
 Lance-le :  python3 automatisation/03_web_apis/scraping.py
+
+🗺️ CHEMINEMENT DU SCRIPT (les grandes étapes, dans l'ordre) :
+   1. IMPORTS    : requests (télécharger) + BeautifulSoup (analyser le HTML).
+   2. CONSTANTE  : l'URL de la page à analyser.
+   3. FONCTION   : scraper() télécharge la page, l'analyse, et extrait
+                   le titre et les paragraphes.
+   4. PROGRAMME  : le bloc __main__ appelle la fonction (dans un try/except)
+                   PUIS affiche ce qui a été extrait.
 """
 
 import requests

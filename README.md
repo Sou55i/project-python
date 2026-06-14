@@ -58,6 +58,9 @@ python3 automatisation/00_demarrer/premier_script.py
 
 ---
 
+> 🧭 Tu te demandes **dans quel ordre** écrire ton code (imports, fonctions, etc.) ?
+> Lis le guide [automatisation/ANATOMIE_D_UN_SCRIPT.md](./automatisation/ANATOMIE_D_UN_SCRIPT.md).
+
 ## 📚 Le parcours Automatisation en un coup d'œil
 
 | Étape | Module | Ce que tu apprends |

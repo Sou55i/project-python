@@ -5,6 +5,13 @@ Comment lire et écrire les deux formats de données les plus courants
 en automatisation, avec les modules 'csv' et 'json' (inclus dans Python).
 
 Lance-le :  python3 automatisation/02_fichiers_dossiers/csv_json.py
+
+🗺️ CHEMINEMENT DU SCRIPT (les grandes étapes, dans l'ordre) :
+   1. IMPORTS   : csv et json (outils inclus dans Python) + Path.
+   2. PRÉPARER  : on crée un dossier "exemples" pour y ranger les fichiers produits.
+   3. PARTIE 1  : CSV  -> on ÉCRIT une liste de données en CSV, puis on la RELIT.
+   4. PARTIE 2  : JSON -> on ÉCRIT un dictionnaire en JSON, puis on le RELIT.
+   (Schéma répété : on écrit d'abord, on relit ensuite pour vérifier.)
 """
 
 # 'import csv' = on ouvre la caisse à outils 'csv' de la bibliothèque standard.

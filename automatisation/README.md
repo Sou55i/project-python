@@ -31,6 +31,18 @@ une énorme bibliothèque d'outils tout prêts.
 | [05_donnees_rapports](./05_donnees_rapports/) | Tableaux de données, agrégation | Un rapport de ventes automatique |
 | [06_bibliotheques](./06_bibliotheques/) | Stdlib vs tierces, pip, requirements | Explorer les modules installés |
 
+## 🧭 Comprendre la structure d'un script
+
+Avant (ou après) le module 01, lis le guide **[ANATOMIE_D_UN_SCRIPT.md](./ANATOMIE_D_UN_SCRIPT.md)** :
+il explique **dans quel ordre** écrire son code (imports → constantes → fonctions →
+programme principal), pourquoi Python lit de haut en bas, et comment lire un script
+complexe. Un squelette prêt à copier t'attend dans
+**[modele_script.py](./modele_script.py)**.
+
+> 💡 Les scripts un peu complexes commencent désormais par un bloc
+> **« 🗺️ CHEMINEMENT DU SCRIPT »** qui résume leurs étapes : lis-le en premier pour
+> saisir la logique avant de plonger dans le détail.
+
 ## Comment bien apprendre
 
 > 🧠 **Règle d'or : lis la théorie AVANT de regarder le code.**

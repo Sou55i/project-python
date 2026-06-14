@@ -8,6 +8,14 @@ Nécessite : une connexion Internet + la bibliothèque 'requests'
             (pip install -r requirements.txt)
 
 Lance-le :  python3 automatisation/03_web_apis/appeler_api.py
+
+🗺️ CHEMINEMENT DU SCRIPT (les grandes étapes, dans l'ordre) :
+   1. IMPORTS    : la bibliothèque requests (pour parler au web).
+   2. CONSTANTES : l'URL de l'API + les paramètres de la demande (latitude...).
+   3. FONCTION   : obtenir_meteo() envoie la requête, vérifie la réponse,
+                   et renvoie les données (converties en dictionnaire).
+   4. PROGRAMME  : le bloc __main__ appelle la fonction (dans un try/except
+                   au cas où le réseau échoue) PUIS affiche le résultat.
 """
 
 # 'requests' est une bibliothèque TIERCE (installée via pip), pas de la stdlib.
