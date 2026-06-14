@@ -19,10 +19,11 @@ la même pédagogie** :
 | Langage | Dossier | Pour quoi faire | État |
 |---------|---------|-----------------|------|
 | 🐍 **Python** | [`python/`](./python/) | Automatisation, scripts, données, web. **Idéal pour débuter.** | ✅ Complet |
-| 🇨 **C** | [`c/`](./c/) | Le langage « bas niveau » fondateur, proche de la machine. | 🚧 Fondations |
-| ➕ **C++** | [`cpp/`](./cpp/) | C + objets et outils modernes (STL). | 🚧 Fondations |
-| 🐹 **Go** | [`go/`](./go/) | Langage moderne, simple, rapide à compiler. | 🚧 Fondations |
-| ⚙️ **Assembleur** | [`asm/`](./asm/) | Le plus proche du processeur (x86-64). Le plus technique. | 🚧 Fondations |
+| 🐚 **Bash** | [`bash/`](./bash/) | Le langage du terminal : automatiser des tâches et piloter des outils. | 🚧 Fondations |
+| 🇨 **C** | [`c/`](./c/) | Le langage « bas niveau » fondateur, proche de la machine. | ✅ 00→09 |
+| ➕ **C++** | [`cpp/`](./cpp/) | C + objets et outils modernes (STL). | ✅ 00→09 |
+| 🐹 **Go** | [`go/`](./go/) | Langage moderne, simple, rapide à compiler. | ✅ 00→09 |
+| ⚙️ **Assembleur** | [`asm/`](./asm/) | Le plus proche du processeur (x86-64). Le plus technique. | ✅ 00→09 |
 
 > Chaque dossier contient son propre guide de démarrage (installation, compilation/exécution)
 > et ses modules. Commence par le `README.md` du langage qui t'intéresse.

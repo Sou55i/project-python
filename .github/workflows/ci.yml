@@ -92,5 +92,16 @@ jobs:
           python -m py_compile $(find python -name '*.py')
           echo "::endgroup::"
 
+      # --- Bash : bash -n vérifie la syntaxe de chaque script sans l'exécuter ---
+      - name: Vérifier le Bash
+        run: |
+          set -e
+          echo "::group::Bash"
+          while IFS= read -r f; do
+            echo "bash -n $f"
+            bash -n "$f"
+          done < <(find bash -name '*.sh')
+          echo "::endgroup::"
+
       - name: Tout est vert ✅
         run: echo "Tous les exemples des 5 langages compilent / s'assemblent correctement."
