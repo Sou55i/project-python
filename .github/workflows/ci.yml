@@ -1,0 +1,96 @@
+name: CI — compiler tous les exemples
+
+# But : vérifier qu'à chaque modification, TOUS les exemples du dépôt
+# compilent / s'assemblent / restent valides, dans les 5 langages.
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+  workflow_dispatch:   # permet aussi de lancer la CI à la main depuis l'onglet Actions
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupérer le code
+        uses: actions/checkout@v4
+
+      # gcc, g++ et binutils (as/ld) sont déjà présents sur ubuntu-latest.
+      - name: Vérifier les outils C / C++ / Asm
+        run: |
+          gcc --version | head -1
+          g++ --version | head -1
+          as --version | head -1
+
+      - name: Installer Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: "1.24"
+
+      - name: Installer Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Installer les dépendances Python
+        run: pip install -r python/requirements.txt
+
+      # --- C : vérification de compilation (-fsyntax-only) avec les avertissements ---
+      # On utilise -fsyntax-only car certains modules sont multi-fichiers
+      # (un .c sans main() ne se lie pas seul) : on valide donc la compilation,
+      # pas l'édition de liens. -pthread couvre le module threads.
+      - name: Compiler le C
+        run: |
+          set -e
+          echo "::group::C"
+          while IFS= read -r f; do
+            echo "gcc $f"
+            gcc -fsyntax-only -Wall -Werror -pthread "$f"
+          done < <(find c -name '*.c')
+          echo "::endgroup::"
+
+      # --- C++ : idem en C++17 ---
+      - name: Compiler le C++
+        run: |
+          set -e
+          echo "::group::C++"
+          while IFS= read -r f; do
+            echo "g++ $f"
+            g++ -fsyntax-only -std=c++17 -Wall -Werror "$f"
+          done < <(find cpp -name '*.cpp')
+          echo "::endgroup::"
+
+      # --- Assembleur : on assemble réellement chaque .s avec as ---
+      - name: Assembler l'Assembleur
+        run: |
+          set -e
+          echo "::group::Asm"
+          while IFS= read -r f; do
+            echo "as $f"
+            as "$f" -o /dev/null
+          done < <(find asm -name '*.s')
+          echo "::endgroup::"
+
+      # --- Go : go vet compile chaque fichier. On les traite séparément car
+      # chaque exemple a son propre 'func main' dans le même dossier. ---
+      - name: Vérifier le Go
+        run: |
+          set -e
+          echo "::group::Go"
+          while IFS= read -r f; do
+            echo "go vet $f"
+            go vet "$f"
+          done < <(find go -name '*.go')
+          echo "::endgroup::"
+
+      # --- Python : on compile tous les .py en bytecode (détecte les erreurs de syntaxe) ---
+      - name: Compiler le Python
+        run: |
+          set -e
+          echo "::group::Python"
+          python -m py_compile $(find python -name '*.py')
+          echo "::endgroup::"
+
+      - name: Tout est vert ✅
+        run: echo "Tous les exemples des 5 langages compilent / s'assemblent correctement."

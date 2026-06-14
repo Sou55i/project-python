@@ -1,5 +1,7 @@
 # 💻 Apprendre à programmer — référence multi-langages
 
+[![CI — compiler tous les exemples](https://github.com/Sou55i/apprendre-programmation/actions/workflows/ci.yml/badge.svg)](https://github.com/Sou55i/apprendre-programmation/actions/workflows/ci.yml)
+
 Bienvenue ! Ce dépôt est une **référence d'apprentissage de la programmation en français**,
 pensée pour les **grands débutants**. Chaque langage a son propre dossier, mais **tous suivent
 la même pédagogie** :
