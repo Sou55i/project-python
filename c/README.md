@@ -48,6 +48,7 @@ Autres différences notables avec Python :
 | 4 | [`04_structures`](./04_structures/) | Structures (`struct`, `typedef`), champ `.` et flèche `->`, tableaux de structures |
 | 5 | [`05_fichiers`](./05_fichiers/) | Fichiers : `fopen` (modes `"w"`/`"a"`/`"r"`), vérifier `NULL`, écrire (`fprintf`/`fputs`), lire (`fgets`), `fclose` |
 | 6 | [`06_preprocesseur_modules`](./06_preprocesseur_modules/) | Préprocesseur (`#define`, `#include` `<>` vs `""`), séparer en `.h`/`.c`, garde d'inclusion, compiler plusieurs fichiers ensemble |
+| 7 | [`07_debugger`](./07_debugger/) | Trouver/corriger les bugs : compiler avec `-g`/`-Wall`, erreurs fréquentes (segfault, tableau hors limites, fuite mémoire…), l'essentiel de `gdb` (`run`, `bt`, `break`, `print`…) et `valgrind` |
 
 > 🚧 D'autres modules (projets…)
 > viendront ensuite, dans le même style.
