@@ -28,6 +28,9 @@ la même pédagogie** :
 | ➕ **C++** | [`cpp/`](./cpp/) | C + objets et outils modernes (STL). | ✅ Complet |
 | 🐹 **Go** | [`go/`](./go/) | Langage moderne, simple, rapide à compiler. | ✅ Complet |
 | ⚙️ **Assembleur** | [`asm/`](./asm/) | Le plus proche du processeur (x86-64). Le plus technique. | ✅ Complet |
+| 🦀 **Rust** | [`rust/`](./rust/) | Performance du C **+ sécurité mémoire** garantie à la compilation. | 🚧 En cours |
+| 🟨 **JS / TS** | [`js-ts/`](./js-ts/) | JavaScript & TypeScript avec Node.js : web, scripts, serveurs. | 🚧 En cours |
+| ☕ **Java** | [`java/`](./java/) | Très orienté objet, multiplateforme (JVM). Incontournable en entreprise. | 🚧 En cours |
 
 > Chaque parcours « complet » contient : modules **00 → 09** (fondations + avancés), un
 > **projet capstone**, un **module sécurité** ([`pentest/`](./python/pentest/)), et ses

@@ -1,0 +1,9 @@
+{
+  "name": "module-06-modules-npm",
+  "version": "1.0.0",
+  "description": "Exemple de modules JavaScript (CommonJS) et carte d'identite d'un projet npm.",
+  "scripts": {
+    "start": "node utiliser.js"
+  },
+  "dependencies": {}
+}

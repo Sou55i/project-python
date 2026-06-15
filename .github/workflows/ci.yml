@@ -36,6 +36,17 @@ jobs:
       - name: Installer les dépendances Python
         run: pip install -r python/requirements.txt
 
+      - name: Installer Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Installer Java (JDK)
+        uses: actions/setup-java@v4
+        with:
+          distribution: "temurin"
+          java-version: "21"
+
       # --- C : vérification de compilation (-fsyntax-only) avec les avertissements ---
       # On utilise -fsyntax-only car certains modules sont multi-fichiers
       # (un .c sans main() ne se lie pas seul) : on valide donc la compilation,
@@ -123,5 +134,54 @@ jobs:
           }
           if ($erreurTotale -gt 0) { exit 1 }
 
+      # --- Rust : on compile réellement chaque .rs avec rustc (rustc est préinstallé) ---
+      - name: Compiler le Rust
+        run: |
+          set -e
+          echo "::group::Rust"
+          while IFS= read -r f; do
+            echo "rustc $f"
+            rustc --edition 2021 "$f" -o /tmp/rustbin
+          done < <(find rust -name '*.rs')
+          echo "::endgroup::"
+
+      # --- JavaScript : node --check valide la syntaxe de chaque .js ---
+      - name: Vérifier le JavaScript
+        run: |
+          set -e
+          echo "::group::JavaScript"
+          while IFS= read -r f; do
+            echo "node --check $f"
+            node --check "$f"
+          done < <(find js-ts -name '*.js')
+          echo "::endgroup::"
+
+      # --- TypeScript : tsc --noEmit type-vérifie chaque .ts (s'il y en a) ---
+      - name: Vérifier le TypeScript
+        run: |
+          set -e
+          if find js-ts -name '*.ts' | grep -q .; then
+            echo "::group::TypeScript"
+            npm install -g typescript >/dev/null 2>&1
+            while IFS= read -r f; do
+              echo "tsc --noEmit $f"
+              tsc --noEmit --skipLibCheck "$f"
+            done < <(find js-ts -name '*.ts')
+            echo "::endgroup::"
+          else
+            echo "(aucun fichier .ts pour l'instant)"
+          fi
+
+      # --- Java : javac compile chaque .java (nom de fichier = classe publique) ---
+      - name: Compiler le Java
+        run: |
+          set -e
+          echo "::group::Java"
+          while IFS= read -r f; do
+            echo "javac $f"
+            javac -d /tmp/javabuild "$f"
+          done < <(find java -name '*.java')
+          echo "::endgroup::"
+
       - name: Tout est vert ✅
-        run: echo "Tous les exemples (Python, Bash, C, C++, Go, Asm, PowerShell) sont valides."
+        run: echo "Tous les exemples (Python, Bash, PowerShell, C, C++, Go, Asm, Rust, JS/TS, Java) sont valides."
