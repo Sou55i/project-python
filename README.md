@@ -14,17 +14,24 @@ la même pédagogie** :
 
 ---
 
+> 🧭 **Nouveau ici ?** Commence par le **[SOMMAIRE.md](./SOMMAIRE.md)** : il indique
+> *dans quel ordre* apprendre et donne tous les liens.
+
 ## 🗂️ Les langages
 
 | Langage | Dossier | Pour quoi faire | État |
 |---------|---------|-----------------|------|
 | 🐍 **Python** | [`python/`](./python/) | Automatisation, scripts, données, web. **Idéal pour débuter.** | ✅ Complet |
-| 🐚 **Bash** | [`bash/`](./bash/) | Le langage du terminal : automatiser des tâches et piloter des outils. | ✅ 00→09 |
-| 🟦 **PowerShell** | [`powershell/`](./powershell/) | Terminal + scripts orientés objets (Windows et multiplateforme). | ✅ 00→09 |
-| 🇨 **C** | [`c/`](./c/) | Le langage « bas niveau » fondateur, proche de la machine. | ✅ 00→09 |
-| ➕ **C++** | [`cpp/`](./cpp/) | C + objets et outils modernes (STL). | ✅ 00→09 |
-| 🐹 **Go** | [`go/`](./go/) | Langage moderne, simple, rapide à compiler. | ✅ 00→09 |
-| ⚙️ **Assembleur** | [`asm/`](./asm/) | Le plus proche du processeur (x86-64). Le plus technique. | ✅ 00→09 |
+| 🐚 **Bash** | [`bash/`](./bash/) | Le langage du terminal : automatiser des tâches et piloter des outils. | ✅ Complet |
+| 🟦 **PowerShell** | [`powershell/`](./powershell/) | Terminal + scripts orientés objets (Windows et multiplateforme). | ✅ Complet |
+| 🇨 **C** | [`c/`](./c/) | Le langage « bas niveau » fondateur, proche de la machine. | ✅ Complet |
+| ➕ **C++** | [`cpp/`](./cpp/) | C + objets et outils modernes (STL). | ✅ Complet |
+| 🐹 **Go** | [`go/`](./go/) | Langage moderne, simple, rapide à compiler. | ✅ Complet |
+| ⚙️ **Assembleur** | [`asm/`](./asm/) | Le plus proche du processeur (x86-64). Le plus technique. | ✅ Complet |
+
+> Chaque parcours « complet » contient : modules **00 → 09** (fondations + avancés), un
+> **projet capstone**, un **module sécurité** ([`pentest/`](./python/pentest/)), et ses
+> ressources (aide-mémoire, glossaire, anatomie d'un programme).
 
 > Chaque dossier contient son propre guide de démarrage (installation, compilation/exécution)
 > et ses modules. Commence par le `README.md` du langage qui t'intéresse.

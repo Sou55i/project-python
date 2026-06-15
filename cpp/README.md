@@ -58,7 +58,7 @@ Autres différences avec Python (héritées du C) :
 
 ---
 
-## 📚 Le parcours (🚧 Fondations)
+## 📚 Le parcours
 
 | Étape | Module | Ce que tu apprends |
 |-------|--------|--------------------|
@@ -71,8 +71,8 @@ Autres différences avec Python (héritées du C) :
 | 6 | [`06_stl`](./06_stl/) | La STL : conteneurs `std::map` (dictionnaire clé→valeur) et `std::set` (sans doublons), algorithmes `std::sort`/`std::find`, itérateurs `begin()`/`end()` |
 | 7 | [`07_debugger`](./07_debugger/) | Trouver et corriger les bugs : compiler avec `-g`/`-Wall`, lire les erreurs du compilateur, erreurs fréquentes (segfault, hors limites, non-initialisée…), gdb (`run`/`bt`/`break`/`next`/`print`), `try/catch` |
 
-> 🚧 **Fondations** : ce parcours débute. D'autres modules (projets…) viendront ensuite,
-> dans le même style.
+> ✅ **Parcours complet** : fondations (00→07), modules avancés (08–09), projet capstone et
+> module sécurité (voir plus bas).
 
 ## 🚀 Modules avancés
 

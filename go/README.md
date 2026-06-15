@@ -98,8 +98,8 @@ Une fois les fondations solides, va plus loin :
 > 💡 Comme pour les fondations : chaque fichier `.go` a son propre `package main` + `func main`
 > dans le même dossier, et se lance **séparément** avec `go run go/08_generics/<fichier>.go`.
 
-> 🚧 **Fondations.** D'autres modules (petits projets…) viendront
-> ensuite, dans le même style.
+> ✅ **Parcours complet** : fondations (00→07), modules avancés (08–09), projet capstone et
+> module sécurité (voir plus bas).
 
 > 🛠️ **Prêt à assembler ?** Une fois les fondations digérées, passe au dossier
 > [`projets/`](./projets/) : des mini-projets **capstone** qui COMBINENT plusieurs
