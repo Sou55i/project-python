@@ -111,7 +111,7 @@ as asm/00_demarrer/hello.s -o /tmp/p.o && ld /tmp/p.o -o /tmp/p && /tmp/p ; echo
 
 ---
 
-## 📚 Le parcours (🚧 Fondations)
+## 📚 Le parcours
 
 | Étape | Module | Ce que tu apprends |
 |-------|--------|--------------------|
@@ -124,8 +124,8 @@ as asm/00_demarrer/hello.s -o /tmp/p.o && ld /tmp/p.o -o /tmp/p && /tmp/p ; echo
 | 6 | [`06_interfacage_c`](./06_interfacage_c/) | Écrire une FONCTION asm appelée depuis le C, convention System V AMD64 (`rdi`/`rsi` → `rax`), `.global` sans `_start`, lier avec `gcc main.c somme.s -o prog` |
 | 7 | [`07_debugger`](./07_debugger/) | Déboguer l'asm avec **gdb** : assembler avec `-g`, `break`/`run`/`stepi`, `info registers` pour « voir » les registres pas à pas, examiner la mémoire (`x/…`), pièges fréquents (`div`, syscalls, segfault) |
 
-> 🚧 **Fondations** : ce parcours pose les bases. D'autres modules (calculs avancés,
-> autres conventions d'appel…) viendront ensuite, dans le même style.
+> ✅ **Parcours complet** : fondations (00→07), modules avancés (08–09), projets et module
+> sécurité (voir plus bas).
 
 ## 🚀 Modules avancés
 
