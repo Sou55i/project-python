@@ -15,11 +15,11 @@ thème**, pour comparer une même attaque d'un langage à l'autre.
 
 Un scanner se trouve dans le `pentest/` de chaque langage compilable/scriptable :
 
-[Python](./python/pentest/) · [Bash](./bash/pentest/scan_ports.sh) ·
-[PowerShell](./powershell/pentest/Test-Ports.ps1) · [C](./c/pentest/scanner.c) ·
-[C++](./cpp/pentest/scanner.cpp) · [Go](./go/pentest/scanner.go) ·
-[Rust](./rust/pentest/scanner.rs) · [JS](./js-ts/pentest/scanner.js) ·
-[Java](./java/pentest/ScannerPorts.java) — tous limités à `127.0.0.1`.
+[Python](./python/pentest/) · [Bash](./bash/pentest/02_network/scan_ports.sh) ·
+[PowerShell](./powershell/pentest/02_network/Test-Ports.ps1) · [C](./c/pentest/scanner.c) ·
+[C++](./cpp/pentest/scanner.cpp) · [Go](./go/pentest/02_network/port_scanner.go) ·
+[Rust](./rust/pentest/02_network/port_scanner.rs) · [JS](./js-ts/pentest/scanner.js) ·
+[Java](./java/pentest/02_network/ScannerPorts.java) — tous limités à `127.0.0.1`.
 
 ---
 
