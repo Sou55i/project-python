@@ -1,7 +1,7 @@
-name: CI — compiler tous les exemples
+name: CI — Python (+ autres langages)
 
-# But : vérifier qu'à chaque modification, TOUS les exemples du dépôt
-# compilent / s'assemblent / restent valides, dans les 5 langages.
+# But : valider en priorité le cours PYTHON à chaque modification, puis vérifier
+# que les autres langages (en retrait) compilent / s'assemblent toujours.
 
 on:
   push:
@@ -47,6 +47,16 @@ jobs:
           distribution: "temurin"
           java-version: "21"
 
+      # ========================= PYTHON (le cours principal) =========================
+      # --- Python : on compile tous les .py en bytecode (détecte les erreurs de syntaxe) ---
+      - name: Compiler le Python
+        run: |
+          set -e
+          echo "::group::Python"
+          python -m py_compile $(find python -name '*.py')
+          echo "::endgroup::"
+
+      # ===================== AUTRES LANGAGES (en retrait, validés) =====================
       # --- C : vérification de compilation (-fsyntax-only) avec les avertissements ---
       # On utilise -fsyntax-only car certains modules sont multi-fichiers
       # (un .c sans main() ne se lie pas seul) : on valide donc la compilation,
@@ -93,14 +103,6 @@ jobs:
             echo "go vet $f"
             go vet "$f"
           done < <(find go -name '*.go')
-          echo "::endgroup::"
-
-      # --- Python : on compile tous les .py en bytecode (détecte les erreurs de syntaxe) ---
-      - name: Compiler le Python
-        run: |
-          set -e
-          echo "::group::Python"
-          python -m py_compile $(find python -name '*.py')
           echo "::endgroup::"
 
       # --- Bash : bash -n vérifie la syntaxe de chaque script sans l'exécuter ---
@@ -186,4 +188,4 @@ jobs:
           echo "::endgroup::"
 
       - name: Tout est vert ✅
-        run: echo "Tous les exemples (Python, Bash, PowerShell, C, C++, Go, Asm, Rust, JS/TS, Java) sont valides."
+        run: echo "Python (cours principal) plus les autres langages — tout est valide."
