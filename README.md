@@ -79,6 +79,11 @@ python3 python/00_demarrer/hello.py
 
 ## 📎 Ressources
 
+- 🧠 **[python/COMPRENDRE_LE_CODE.md](./python/COMPRENDRE_LE_CODE.md)** — lire et **décoder**
+  n'importe quel script (`__main__`, `__init__.py`, `', '.join(...)`, `if not x`…). *À lire si
+  tu bloques en lisant du code.*
+- 🧭 **[python/ECRIRE_UN_SCRIPT.md](./python/ECRIRE_UN_SCRIPT.md)** — la **méthode pour
+  raisonner** et trouver les bonnes fonctions/arguments quand on écrit un script.
 - **[python/AIDE_MEMOIRE.md](./python/AIDE_MEMOIRE.md)** — la syntaxe Python résumée sur une page.
 - **[python/GLOSSAIRE.md](./python/GLOSSAIRE.md)** — les termes techniques expliqués simplement.
 - **[python/ANATOMIE_D_UN_SCRIPT.md](./python/ANATOMIE_D_UN_SCRIPT.md)** — dans quel ordre écrire un script.
