@@ -15,7 +15,7 @@ démonter, tranquillement.
 > `Start-Job`).
 
 > 🔗 **Lien avec Python** : ce module est le « cousin PowerShell » du
-> [module 09 de Python](../../python/automatisation/09_concurrence/). Les idées sont
+> [module 09 de Python](../../python/08_asyncio/). Les idées sont
 > **exactement les mêmes** (occuper les temps morts, paralléliser ce qui ATTEND). Si tu
 > l'as déjà lu, tu vas te sentir en terrain connu.
 

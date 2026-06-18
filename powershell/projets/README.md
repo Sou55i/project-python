@@ -5,7 +5,7 @@ important : un **vrai petit projet** qui **combine plusieurs notions à la fois*
 C'est en assemblant ce que tu sais qu'on devient autonome.
 
 > 🐍 **Tu viens de Python ?** C'est l'équivalent PowerShell du projet
-> [`ranger_dossier.py`](../../python/automatisation/02_fichiers_dossiers/ranger_dossier.py).
+> [`ranger_dossier.py`](../../python/10_fichiers_dossiers/ranger_dossier.py).
 > Même idée, autre langage : compare les deux, c'est très instructif.
 
 ---

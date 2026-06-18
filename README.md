@@ -16,6 +16,9 @@ la même pédagogie** :
 
 > 🧭 **Nouveau ici ?** Commence par le **[SOMMAIRE.md](./SOMMAIRE.md)** : il indique
 > *dans quel ordre* apprendre et donne tous les liens.
+>
+> 🔐 **Sécurité ?** L'[index `SECURITE.md`](./SECURITE.md) regroupe toutes les démos pentest
+> (éducatives, lab) par thème. ⚠️ Usage strictement autorisé.
 
 ## 🗂️ Les langages
 

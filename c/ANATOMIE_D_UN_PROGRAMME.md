@@ -6,7 +6,7 @@ ordre les ranger** pour former un programme complet et propre. Ce guide explique
 
 > 📌 À lire après les modules [`00_demarrer`](./00_demarrer/) et
 > [`01_les_bases`](./01_les_bases/), puis à garder sous la main comme aide-mémoire.
-> C'est le cousin, côté C, du guide Python `python/automatisation/ANATOMIE_D_UN_SCRIPT.md`.
+> C'est le cousin, côté C, du guide Python `python/ANATOMIE_D_UN_SCRIPT.md`.
 
 ---
 

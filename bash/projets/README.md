@@ -16,7 +16,7 @@ parcours — c'est en construisant des outils utiles qu'on devient autonome.
 | [`organiser.sh`](./organiser.sh) | **Range** automatiquement les fichiers d'un dossier dans des sous-dossiers selon leur **extension** (`.txt` → `Documents/`, `.jpg` → `Images/`, `.csv` → `Tableaux/`…) | **02** (fichiers : `for`, `mkdir -p`, `mv`, `[[ -f ]]`) · **01** (conditions, `case`) · **06** (robustesse : `set -euo pipefail`) + manipulation de chemins |
 
 > 💡 `organiser.sh` est l'**équivalent Bash** du projet Python
-> [`ranger_dossier.py`](../../python/automatisation/projets/) : même idée, mais en pilotant
+> [`ranger_dossier.py`](../../python/projets/) : même idée, mais en pilotant
 > le terminal.
 
 ---

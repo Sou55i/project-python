@@ -79,7 +79,7 @@ echo "Tout le linge est lavé !"   # ne s'affiche qu'une fois les deux finies
 ## 4. Quand c'est utile ? (la question la plus importante)
 
 Le parallélisme n'accélère pas tout. Il aide surtout les tâches qui **ATTENDENT** quelque
-chose d'extérieur, exactement comme dans le [module 09 de Python](../../python/automatisation/09_concurrence/)
+chose d'extérieur, exactement comme dans le [module 09 de Python](../../python/08_asyncio/)
 sur la concurrence.
 
 - **Tâche qui attend (réseau, disque…)** : télécharger plusieurs fichiers, interroger
