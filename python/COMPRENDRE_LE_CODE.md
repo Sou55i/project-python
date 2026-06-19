@@ -264,15 +264,105 @@ with open("data.txt") as f:    # ouvre le fichier, le range dans f
 # à la sortie du bloc, le fichier est AUTOMATIQUEMENT refermé
 ```
 
-### `*args` et `**kwargs` (pour info)
+### `*args` et `**kwargs` — « un nombre quelconque d'arguments »
 
-Tu les croiseras : ils veulent dire **« un nombre quelconque d'arguments »** (positionnels
-pour `*args`, nommés pour `**kwargs`). Détaillé dans le module
-[`03_fonctions_modules`](./03_fonctions_modules/).
+Ces deux-là intimident à cause des étoiles, mais l'idée est simple : ils permettent à une
+fonction d'accepter **autant d'arguments qu'on veut**, sans les nommer un par un d'avance.
+
+Tu en connais déjà un sans le savoir : `print("a", "b", "c", "d")` accepte 1, 2 ou 50
+arguments. C'est grâce à `*args`.
+
+**`*args`** = « récupère tous les arguments **positionnels** restants dans un **tuple** ».
+
+```python
+def additionner(*args):       # args sera un tuple : (1, 2, 3)
+    total = 0
+    for n in args:            # on parcourt chaque argument reçu
+        total += n
+    return total
+
+additionner(1, 2, 3)          # → 6
+additionner(10, 20)           # → 30   (marche avec n'importe combien de nombres)
+```
+
+**`**kwargs`** = « récupère tous les arguments **nommés** restants dans un **dictionnaire** ».
+(*kwargs* = *keyword arguments*, « arguments-mot-clé ».)
+
+```python
+def afficher(**kwargs):       # kwargs sera un dict : {"nom": "Ada", "age": 36}
+    for cle, valeur in kwargs.items():
+        print(f"{cle} = {valeur}")
+
+afficher(nom="Ada", age=36)
+# nom = Ada
+# age = 36
+```
+
+> 🔑 **Ce qui compte, ce n'est pas le mot, c'est l'étoile.** `*` = « regroupe les arguments
+> **positionnels** » ; `**` = « regroupe les arguments **nommés** ». Les noms `args` et `kwargs`
+> sont une simple **convention** : `def f(*valeurs)` marche tout aussi bien. Quand tu vois ces
+> étoiles **dans une définition** `def`, traduis : *« cette fonction accepte un nombre variable
+> d'arguments »*.
+
+**L'étoile sert aussi à l'INVERSE** (au moment de l'appel) : « déplie » une liste/un dict en
+arguments séparés.
+
+```python
+nombres = [1, 2, 3]
+additionner(*nombres)         # équivaut à additionner(1, 2, 3) → 6   (* "déballe" la liste)
+
+infos = {"nom": "Ada", "age": 36}
+afficher(**infos)             # équivaut à afficher(nom="Ada", age=36)  (** "déballe" le dict)
+```
+
+> 🧠 **La règle pour lire les étoiles** : `*`/`**` **dans un `def`** = « j'**emballe** ce que je
+> reçois » ; `*`/`**` **dans un appel** = « je **déballe** ce que j'envoie ». Approfondi au
+> module [`03_fonctions_modules`](./03_fonctions_modules/).
 
 ---
 
-## 5. S'entraîner à lire
+## 5. Exercice guidé : « décode chaque symbole de cette ligne »
+
+L'objectif n'est pas seulement de comprendre *ce que fait* une ligne, mais de savoir **nommer
+le rôle de chaque symbole**. Entraîne-toi sur celle-ci :
+
+```python
+resultats = [str(n).zfill(3) for n in donnees if n > 0]
+```
+
+Avant de regarder, essaie de répondre : *à quoi sert chaque `( )`, `[ ]`, `.` ?*
+
+<details>
+<summary>💡 Décodage complet, symbole par symbole</summary>
+
+On lit **de l'intérieur vers l'extérieur**, et on nomme chaque symbole :
+
+| Morceau | Symbole(s) | Rôle |
+|---------|-----------|------|
+| `donnees` | — | la liste de départ, ex. `[5, -2, 17]` |
+| `if n > 0` | `>` | **filtre** : on ne garde que les éléments positifs |
+| `str(n)` | `( )` d'**appel** | **convertit** le nombre `n` en texte (ex. `5` → `"5"`) |
+| `.zfill` | `.` d'**accès** | accède à la **méthode** `zfill` de la chaîne |
+| `.zfill(3)` | `( )` d'**appel** + arg `3` | complète avec des zéros à gauche jusqu'à 3 caractères : `"5"` → `"005"` |
+| `[ ... for ... in ... if ... ]` | `[ ]` de **création de liste** | **compréhension** : construit une nouvelle liste |
+
+Résultat pour `donnees = [5, -2, 17]` : on jette `-2`, et on obtient `["005", "017"]`.
+
+Traduction en français : *« pour chaque nombre positif de `donnees`, transforme-le en texte
+rembourré de zéros sur 3 chiffres, et range tout ça dans une nouvelle liste »*.
+
+> 🔎 Et `zfill`, comment le « connaître » ? On ne le devine pas : on a un **besoin** (« afficher
+> `5` comme `005` »), on cherche *« python pad number with zeros »*, et la doc des chaînes donne
+> `zfill`. C'est exactement la démarche de [ECRIRE_UN_SCRIPT.md](./ECRIRE_UN_SCRIPT.md).
+</details>
+
+> 🎯 **Refais ce travail** sur 3 lignes denses de n'importe quel script : pour chaque symbole,
+> dis à voix haute « ça, c'est un appel / un accès / une création de liste / un filtre… ».
+> C'est l'exercice qui fait passer de « je récite la syntaxe » à « je lis le code ».
+
+---
+
+## 6. S'entraîner à lire
 
 Reprends **n'importe quel script** du dépôt (par ex. dans [`pentest/`](./pentest/)) et, pour
 chaque ligne qui te bloque :
