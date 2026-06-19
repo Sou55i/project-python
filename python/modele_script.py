@@ -14,7 +14,7 @@ Lance-le :  python3 python/modele_script.py
 # (2) LES IMPORTS  ->  on ouvre les caisses à outils, tout en haut.
 #     (Ici on n'a besoin d'aucun outil externe, donc rien à importer.
 #      On laisse la section pour montrer où elle se place.
-#      Cours sur les imports : automatisation/06_bibliotheques/)
+#      Cours sur les imports : 14_bibliotheques/)
 # ═══════════════════════════════════════════════════════════════
 
 

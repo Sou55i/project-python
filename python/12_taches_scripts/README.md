@@ -1,4 +1,4 @@
-# Module 04 — Scripts réutilisables et tâches planifiées
+# Module 12 — Scripts réutilisables et tâches planifiées
 
 Jusqu'ici, nos scripts faisaient une chose figée. Ici, on apprend à en faire de **vrais
 outils** : configurables au lancement, et capables de tourner **tout seuls** à heure fixe
@@ -114,6 +114,11 @@ logging.info("Sauvegarde démarrée")
 logging.error("Le dossier source est introuvable")
 ```
 
+> 🔣 **« D'où sortent le `2` de `schedule.every(2)`, le `exist_ok=` ou le `%(asctime)s` ? »**
+> Ces détails de ponctuation (parenthèses, `=`, `%`, appels enchaînés `a.b().c()`) et la façon
+> de **savoir quels arguments** une fonction accepte sont expliqués pas à pas dans
+> [`../LES_SYMBOLES.md`](../LES_SYMBOLES.md). À lire si ce genre de ligne te bloque encore.
+
 ---
 
 ## ▶️ À toi de jouer
@@ -129,4 +134,4 @@ python3 python/12_taches_scripts/sauvegarde.py
 python3 python/12_taches_scripts/tache_repetee.py
 ```
 
-➡️ Module suivant : [`05_donnees_rapports`](../13_donnees_rapports/).
+➡️ Module suivant : [`13_donnees_rapports`](../13_donnees_rapports/).

@@ -1,4 +1,4 @@
-# Module 06 — Les bibliothèques : laquelle ajouter, et quand ?
+# Module 14 — Les bibliothèques : laquelle ajouter, et quand ?
 
 Tu as déjà écrit `import requests` ou `import pandas`. Mais d'où viennent ces outils ?
 Comment savoir **si** tu as besoin d'une bibliothèque, **laquelle** choisir, et **comment**

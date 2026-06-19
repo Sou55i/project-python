@@ -1,4 +1,4 @@
-# Module 03 — Le web et les APIs
+# Module 11 — Le web et les APIs
 
 Énormément de données vivent sur Internet. Ce module t'apprend à les **récupérer
 automatiquement** : appeler une API, télécharger une page, en extraire des informations.
@@ -128,4 +128,4 @@ Les scripts utilisent des sites publics **prévus pour l'entraînement**
 (`open-meteo.com` pour l'API météo, `example.com` pour le scraping), donc tu peux les
 lancer sans risque.
 
-➡️ Module suivant : [`04_taches_scripts`](../12_taches_scripts/).
+➡️ Module suivant : [`12_taches_scripts`](../12_taches_scripts/).

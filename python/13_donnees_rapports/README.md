@@ -1,4 +1,4 @@
-# Module 05 — Données et rapports automatiques
+# Module 13 — Données et rapports automatiques
 
 Le module final, et le plus gratifiant : transformer des **données brutes** (un export CSV
 en vrac) en un **rapport propre** (totaux, moyennes, classements, fichier Excel), le tout
@@ -110,6 +110,7 @@ Le script génère un faux fichier de ventes, calcule plusieurs indicateurs (chi
 d'affaires total, CA par produit, meilleur vendeur…) et exporte un rapport `.csv` et `.xlsx`.
 Ouvre les fichiers produits dans `exemples/` pour voir le résultat.
 
-🎉 **Bravo, tu as terminé le parcours Automatisation !** Tu as maintenant les bases pour
-écrire tes propres scripts utiles au quotidien. La suite ? Choisis une corvée répétitive de
-ta vraie vie et essaie de l'automatiser.
+🎉 **Bravo, tu maîtrises l'essentiel de l'automatisation des données !** Il reste un dernier
+module, transversal et précieux : savoir **quelle bibliothèque** ajouter et **quand**.
+
+➡️ Module suivant : [`14_bibliotheques`](../14_bibliotheques/).

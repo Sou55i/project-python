@@ -1,4 +1,4 @@
-# Module 02 — Fichiers et dossiers
+# Module 10 — Fichiers et dossiers
 
 C'est **le premier vrai super-pouvoir d'automatisation** : faire en sorte que Python lise,
 écrive, déplace et range des fichiers à ta place. Plus de copier-coller manuel pendant
@@ -134,4 +134,4 @@ python3 python/10_fichiers_dossiers/ranger_dossier.py
 Le script `ranger_dossier.py` travaille sur un dossier de test (`exemples/bazar/`) qu'il
 crée lui-même, pour que tu puisses l'exécuter **sans risque pour tes vrais fichiers**.
 
-➡️ Module suivant : [`03_web_apis`](../11_web_apis/).
+➡️ Module suivant : [`11_web_apis`](../11_web_apis/).
