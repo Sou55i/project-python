@@ -1,7 +1,8 @@
-name: CI — Python (+ autres langages)
+name: CI — 9 langages
 
-# But : valider en priorité le cours PYTHON à chaque modification, puis vérifier
-# que les autres langages (en retrait) compilent / s'assemblent toujours.
+# But : à chaque modification, vérifier que les 9 langages du dépôt compilent /
+# s'assemblent / se parsent toujours correctement.
+# (Le cours Python a son propre dépôt : github.com/TN-RedTeam/Python_guide)
 
 on:
   push:
@@ -28,14 +29,6 @@ jobs:
         with:
           go-version: "1.24"
 
-      - name: Installer Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-
-      - name: Installer les dépendances Python
-        run: pip install -r python/requirements.txt
-
       - name: Installer Node.js
         uses: actions/setup-node@v4
         with:
@@ -47,16 +40,6 @@ jobs:
           distribution: "temurin"
           java-version: "21"
 
-      # ========================= PYTHON (le cours principal) =========================
-      # --- Python : on compile tous les .py en bytecode (détecte les erreurs de syntaxe) ---
-      - name: Compiler le Python
-        run: |
-          set -e
-          echo "::group::Python"
-          python -m py_compile $(find python -name '*.py')
-          echo "::endgroup::"
-
-      # ===================== AUTRES LANGAGES (en retrait, validés) =====================
       # --- C : vérification de compilation (-fsyntax-only) avec les avertissements ---
       # On utilise -fsyntax-only car certains modules sont multi-fichiers
       # (un .c sans main() ne se lie pas seul) : on valide donc la compilation,
@@ -188,4 +171,4 @@ jobs:
           echo "::endgroup::"
 
       - name: Tout est vert ✅
-        run: echo "Python (cours principal) plus les autres langages — tout est valide."
+        run: echo "Les 9 langages compilent / se parsent — tout est valide."

@@ -1,66 +1,61 @@
-# 🐍 Apprendre Python — le cours de référence (pour grands débutants)
+# 🧑‍💻 Apprendre à programmer — 9 langages, une seule pédagogie
 
-[![CI](https://github.com/Sou55i/apprendre-programmation/actions/workflows/ci.yml/badge.svg)](https://github.com/Sou55i/apprendre-programmation/actions/workflows/ci.yml)
+[![CI](https://github.com/TN-RedTeam/apprendre-programmation/actions/workflows/ci.yml/badge.svg)](https://github.com/TN-RedTeam/apprendre-programmation/actions/workflows/ci.yml)
 
-Bienvenue ! Ce dépôt est une **référence d'apprentissage de Python en français**, pensée pour
-les **grands débutants**. On part de zéro et on va jusqu'aux sujets avancés (POO, asyncio,
-tests) puis au **Python appliqué** (automatisation, données, web) et même à un volet
-**sécurité** éducatif.
+Ce dépôt enseigne **9 langages de programmation en français**, avec **la même approche
+pédagogique** : on explique d'abord avec des mots simples, puis on illustre avec du code
+**commenté presque ligne par ligne**.
+
+> 🐍 **Tu cherches le cours de Python ?** Il a désormais son **dépôt dédié** :
+> **👉 [TN-RedTeam/Python_guide](https://github.com/TN-RedTeam/Python_guide)** — c'est *la*
+> référence pour apprendre à coder en partant de zéro. Ce dépôt-ci regroupe les **autres
+> langages**.
 
 > 💡 **On explique d'abord, on code ensuite.**
-> Chaque module commence par un `README.md` qui pose la théorie avec des mots simples et des
-> analogies. Le code qui suit ne fait qu'*illustrer* la théorie. Lis, lance, modifie.
-> Les scripts sont **commentés presque ligne par ligne** et les plus complexes commencent par
-> un bloc **« 🗺️ CHEMINEMENT DU SCRIPT »** qui résume leurs étapes.
-
-> 📁 **Tout le cours est dans le dossier [`python/`](./python/).** Cette page en est le sommaire.
+> Chaque module commence par un `README.md` qui pose la théorie avec des analogies, puis du
+> code commenté. Lis, lance, modifie.
 
 ---
 
-## 🆚 Pourquoi Python ?
+## 🗺️ Les langages
 
-Python ressemble à du **pseudo-code anglais** : c'est le langage idéal pour apprendre à
-programmer **sans se battre avec la syntaxe**.
+Du plus accessible au plus proche de la machine — chaque parcours est **autonome**.
 
-- **Interprété** : pas de compilation, tu tapes `python3 script.py` et ça tourne.
-- **Typage dynamique** : pas besoin de déclarer le type des variables.
-- **Indentation** : ce sont les espaces qui structurent le code (pas les accolades).
-- **« Piles incluses »** : une énorme bibliothèque standard + un écosystème immense.
+| Langage | Pour quoi faire | Niveau |
+|---------|-----------------|:------:|
+| 🐚 **[Bash](./bash/)** | automatiser le terminal Linux/macOS, enchaîner des outils | ⭐⭐ |
+| 🟦 **[PowerShell](./powershell/)** | automatiser/administrer Windows (pipeline d'objets) | ⭐⭐ |
+| 🐹 **[Go](./go/)** | serveurs, outils en ligne de commande, un seul binaire | ⭐⭐ |
+| 🦀 **[Rust](./rust/)** | performance **+ sûreté mémoire** garantie à la compilation | ⭐⭐⭐ |
+| ➕ **[C++](./cpp/)** | logiciels exigeants, jeux, moteurs, la STL | ⭐⭐⭐ |
+| 🇨 **[C](./c/)** | systèmes, embarqué, pointeurs et mémoire manuelle | ⭐⭐⭐⭐ |
+| ⚙️ **[Assembleur](./asm/)** | le plus bas niveau : voir **tout** ce que les autres cachent | ⭐⭐⭐⭐⭐ |
+| 🟨 **[JS / TS](./js-ts/)** | le langage du **web** et de Node.js (TypeScript ajoute les types) | ⭐⭐ |
+| ☕ **[Java](./java/)** | applications d'entreprise, Android, multiplateforme (JVM) | ⭐⭐⭐ |
+
+> 🐍 **Python** n'est plus ici : il vit dans son propre dépôt →
+> **[Python_guide](https://github.com/TN-RedTeam/Python_guide)** (idéal pour **débuter**).
 
 ---
 
-## 🗺️ Le parcours
+## 🚦 Par où commencer ?
 
-Un **seul** parcours progressif, en deux temps : le **cœur du langage**, puis le **Python
-appliqué** pour mettre les concepts en pratique.
+- **Tu débutes totalement** → commence par **[Python](https://github.com/TN-RedTeam/Python_guide)**
+  (dépôt dédié), puis reviens ici pour un 2ᵉ langage.
+- **Tu automatises Unix** → [Bash](./bash/). **Windows** → [PowerShell](./powershell/).
+- **Tu veux comprendre la machine** → [C](./c/), puis [Assembleur](./asm/).
+- **Tu veux de la perf** → [Go](./go/), [Rust](./rust/), [C++](./cpp/).
 
-### Le cœur du langage
-| # | Module | Ce que tu apprends |
-|---|--------|--------------------|
-| 0 | [`00_demarrer`](./python/00_demarrer/) | Installer Python, environnements virtuels, premier script |
-| 1 | [`01_les_bases`](./python/01_les_bases/) | Variables, types, `if`/`for`/`while` |
-| 2 | [`02_collections`](./python/02_collections/) | Listes, dictionnaires, tuples, sets |
-| 3 | [`03_fonctions_modules`](./python/03_fonctions_modules/) | Fonctions, découper et importer son code |
-| 4 | [`04_exceptions_fichiers`](./python/04_exceptions_fichiers/) | Lire/écrire des fichiers, gérer les erreurs |
-| 5 | [`05_poo`](./python/05_poo/) | Programmation orientée objet (classes) |
-| 6 | [`06_iterateurs_generateurs`](./python/06_iterateurs_generateurs/) | Itérateurs, générateurs, efficacité |
-| 7 | [`07_debugger`](./python/07_debugger/) | Trouver et corriger ses bugs |
-| 8 | [`08_asyncio`](./python/08_asyncio/) | Faire plusieurs choses « en même temps » |
-| 9 | [`09_tests_qualite`](./python/09_tests_qualite/) | Tests, code propre et vérifié |
+➡️ Détails et ordre conseillé : **[SOMMAIRE.md](./SOMMAIRE.md)**.
 
-### Python appliqué (automatisation)
-| # | Module | Ce que tu apprends |
-|---|--------|--------------------|
-| 10 | [`10_fichiers_dossiers`](./python/10_fichiers_dossiers/) | Ranger des fichiers, CSV / JSON / Excel |
-| 11 | [`11_web_apis`](./python/11_web_apis/) | Télécharger, appeler des APIs, scraping |
-| 12 | [`12_taches_scripts`](./python/12_taches_scripts/) | Scripts réutilisables (`argparse`) & planification |
-| 13 | [`13_donnees_rapports`](./python/13_donnees_rapports/) | Manipuler des données et générer des rapports (`pandas`) |
-| 14 | [`14_bibliotheques`](./python/14_bibliotheques/) | `pip`, environnements virtuels, `requirements.txt` |
+---
 
-### Pratiquer & aller plus loin
-- 🛠️ **[projets/](./python/projets/)** — mini-projets concrets (ranger des fichiers, carnet de contacts, suivi météo).
-- 🔐 **[pentest/](./python/pentest/)** — sécurité **éducative** (scanners réseau + démos offensives, usage lab uniquement).
-- 🧩 **[modele_script.py](./python/modele_script.py)** — un squelette de script prêt à copier.
+## 📎 Ressources transverses
+
+- 🔬 **[COMPARATIF.md](./COMPARATIF.md)** — le **même** concept (variable, boucle, fonction…)
+  écrit dans chaque langage, + « quel langage pour quelle tâche ».
+- 🔐 **[SECURITE.md](./SECURITE.md)** — index des démos de sécurité **éducatives** (scanners,
+  démos offensives *vulnérable vs corrigé*). ⚠️ Usage autorisé uniquement.
 
 ---
 
@@ -69,38 +64,12 @@ appliqué** pour mettre les concepts en pratique.
 ```bash
 git clone <url-de-ce-depot>
 cd apprendre-programmation
-pip install -r python/requirements.txt        # pour les modules web/données
-python3 python/00_demarrer/hello.py
+# Puis ouvre le dossier du langage qui t'intéresse, ex. :
+bash bash/00_demarrer/hello.sh
+go run go/00_demarrer/hello.go
 ```
 
-➡️ Puis suis les modules dans l'ordre, en commençant par [`python/00_demarrer`](./python/00_demarrer/).
-
----
-
-## 📎 Ressources
-
-- 🔣 **[python/LES_SYMBOLES.md](./python/LES_SYMBOLES.md)** — quand/pourquoi mettre `( )`,
-  `[ ]`, `{ }`, `.`, `=`, `%`, `:`, et **comment savoir quels arguments** prend une fonction.
-- 🧠 **[python/COMPRENDRE_LE_CODE.md](./python/COMPRENDRE_LE_CODE.md)** — lire et **décoder**
-  n'importe quel script (`__main__`, `__init__.py`, `', '.join(...)`, `if not x`…). *À lire si
-  tu bloques en lisant du code.*
-- 🧭 **[python/ECRIRE_UN_SCRIPT.md](./python/ECRIRE_UN_SCRIPT.md)** — la **méthode pour
-  raisonner** et trouver les bonnes fonctions/arguments quand on écrit un script.
-- **[python/AIDE_MEMOIRE.md](./python/AIDE_MEMOIRE.md)** — la syntaxe Python résumée sur une page.
-- **[python/GLOSSAIRE.md](./python/GLOSSAIRE.md)** — les termes techniques expliqués simplement.
-- **[python/ANATOMIE_D_UN_SCRIPT.md](./python/ANATOMIE_D_UN_SCRIPT.md)** — dans quel ordre écrire un script.
-- **[SECURITE.md](./SECURITE.md)** — index des démos sécurité (éducatives). ⚠️ Usage autorisé uniquement.
-
----
-
-## 🌍 Autres langages (plus tard)
-
-Ce dépôt contient aussi des parcours pour **9 autres langages** (Bash, PowerShell, C, C++, Go,
-Assembleur, Rust, JS/TS, Java), construits sur la même pédagogie. Ils sont **en retrait** pour
-l'instant — la priorité est faite à Python.
-
-👉 Si ça t'intéresse : **[SOMMAIRE.md](./SOMMAIRE.md)** (tous les langages) et
-**[COMPARATIF.md](./COMPARATIF.md)** (le même code d'un langage à l'autre).
+Chaque module indique en en-tête comment le lancer.
 
 ---
 

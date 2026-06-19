@@ -8,6 +8,9 @@ c'est de voir **le même concept** écrit dans plusieurs langages. Tu remarquera
 > (proche de la machine) : **Python → Bash → PowerShell → Go → C++ → C → Assembleur**.
 > L'assembleur étant très différent, certaines cases indiquent « concept géré autrement ».
 
+> 🐍 Python sert ici de **point de repère** (le plus lisible). Le **cours Python complet** est
+> dans son dépôt dédié : **[TN-RedTeam/Python_guide](https://github.com/TN-RedTeam/Python_guide)**.
+
 ---
 
 ## 0. Comment on lance le programme
@@ -290,5 +293,6 @@ apprends un nouveau dans un langage, tu le retrouves dans les autres : seule la 
 le niveau de contrôle changent. C'est pour ça qu'**apprendre un 2ᵉ langage est bien plus
 rapide que le premier**.
 
-➡️ Pour démarrer : [Python](./python/) (le plus accessible), puis [C](./c/) pour comprendre
-la machine, puis [Assembleur](./asm/) pour voir tout en bas.
+➡️ Pour démarrer : [Python](https://github.com/TN-RedTeam/Python_guide) (le plus accessible,
+dépôt dédié), puis [C](./c/) pour comprendre la machine, puis [Assembleur](./asm/) pour voir
+tout en bas.

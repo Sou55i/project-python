@@ -9,13 +9,17 @@ Chaque langage possède un dossier `pentest/` (un scanner réseau) et `pentest/o
 (des démos d'attaques, *version vulnérable vs corrigée*). Cette page les regroupe **par
 thème**, pour comparer une même attaque d'un langage à l'autre.
 
+> 🐍 Les démos **Python** vivent désormais dans le dépôt dédié
+> **[Python_guide](https://github.com/TN-RedTeam/Python_guide/tree/main/pentest)** ; les liens
+> « Python » ci-dessous y pointent.
+
 ---
 
 ## 🔎 Reconnaissance réseau (scanners de ports)
 
 Un scanner se trouve dans le `pentest/` de chaque langage compilable/scriptable :
 
-[Python](./python/pentest/) · [Bash](./bash/pentest/02_network/scan_ports.sh) ·
+[Python](https://github.com/TN-RedTeam/Python_guide/tree/main/pentest) · [Bash](./bash/pentest/02_network/scan_ports.sh) ·
 [PowerShell](./powershell/pentest/02_network/Test-Ports.ps1) · [C](./c/pentest/scanner.c) ·
 [C++](./cpp/pentest/scanner.cpp) · [Go](./go/pentest/02_network/port_scanner.go) ·
 [Rust](./rust/pentest/02_network/port_scanner.rs) · [JS](./js-ts/pentest/scanner.js) ·
@@ -27,8 +31,8 @@ Un scanner se trouve dans le `pentest/` de chaque langage compilable/scriptable 
 
 | Technique | Langages |
 |-----------|----------|
-| Cassage par dictionnaire (hash rapide = mot de passe faible cassé vite) | [Python](./python/pentest/offensif/cassage_mot_de_passe.py), [Go](./go/pentest/offensif/brute_force.go), [Rust](./rust/pentest/offensif/cassage.rs), [JS](./js-ts/pentest/offensif/cassage.js), [Java](./java/pentest/offensif/Cassage.java) |
-| Sel & rainbow tables (pourquoi saler les hashs) | [Python](./python/pentest/offensif/sel_et_rainbow.py) |
+| Cassage par dictionnaire (hash rapide = mot de passe faible cassé vite) | [Python](https://github.com/TN-RedTeam/Python_guide/blob/main/pentest/offensif/cassage_mot_de_passe.py), [Go](./go/pentest/offensif/brute_force.go), [Rust](./rust/pentest/offensif/cassage.rs), [JS](./js-ts/pentest/offensif/cassage.js), [Java](./java/pentest/offensif/Cassage.java) |
+| Sel & rainbow tables (pourquoi saler les hashs) | [Python](https://github.com/TN-RedTeam/Python_guide/blob/main/pentest/offensif/sel_et_rainbow.py) |
 | Tokens de session faibles (prévisibles vs `crypto/rand`) | [Go](./go/pentest/offensif/token_faible.go) |
 
 **🛡️** Hashs lents (argon2/bcrypt), sel unique, MFA, mots de passe longs, aléatoire cryptographique.
@@ -39,8 +43,8 @@ Un scanner se trouve dans le `pentest/` de chaque langage compilable/scriptable 
 
 | Technique | Langages |
 |-----------|----------|
-| Injection SQL (`' OR '1'='1`) vs requêtes paramétrées | [Python](./python/pentest/offensif/injection_sql.py) |
-| Injection de commande (shell) | [Python](./python/pentest/offensif/injection_commande.py), [Bash](./bash/pentest/offensif/injection_commande.sh) |
+| Injection SQL (`' OR '1'='1`) vs requêtes paramétrées | [Python](https://github.com/TN-RedTeam/Python_guide/blob/main/pentest/offensif/injection_sql.py) |
+| Injection de commande (shell) | [Python](https://github.com/TN-RedTeam/Python_guide/blob/main/pentest/offensif/injection_commande.py), [Bash](./bash/pentest/offensif/injection_commande.sh) |
 | XSS (échappement de sortie) | [JS](./js-ts/pentest/offensif/xss_demo.js) |
 | XXE (entités externes XML) | [Java](./java/pentest/offensif/XmlXxe.java) |
 
@@ -53,7 +57,7 @@ Un scanner se trouve dans le `pentest/` de chaque langage compilable/scriptable 
 | Technique | Langages |
 |-----------|----------|
 | IDOR / contrôle d'accès cassé | [JS](./js-ts/pentest/offensif/idor.js) |
-| SSRF (requête vers ressources internes) | [Python](./python/pentest/offensif/ssrf.py) |
+| SSRF (requête vers ressources internes) | [Python](https://github.com/TN-RedTeam/Python_guide/blob/main/pentest/offensif/ssrf.py) |
 | Traversée de chemin (`../../etc/passwd`) | [Go](./go/pentest/offensif/traversee_chemin.go), [Java](./java/pentest/offensif/TraverseeChemin.java) |
 | Pollution de prototype (JS) | [JS](./js-ts/pentest/offensif/pollution_prototype.js) |
 
@@ -79,7 +83,7 @@ Un scanner se trouve dans le `pentest/` de chaque langage compilable/scriptable 
 | Technique | Langages |
 |-----------|----------|
 | Reverse shell (lab, `127.0.0.1`, garde-fou) | [Bash](./bash/pentest/offensif/reverse_shell.sh), [PowerShell](./powershell/pentest/offensif/Invoke-ReverseShellDemo.ps1), [Go](./go/pentest/offensif/reverse_shell.go), [Java](./java/pentest/offensif/ReverseShell.java) |
-| Désérialisation non sécurisée (RCE) | [Python](./python/pentest/offensif/deserialisation.py) |
+| Désérialisation non sécurisée (RCE) | [Python](https://github.com/TN-RedTeam/Python_guide/blob/main/pentest/offensif/deserialisation.py) |
 | Énumération de mauvaises permissions (privesc) | [Bash](./bash/pentest/offensif/enum_privesc.sh) |
 | Reverse engineering / désassemblage | [Asm](./asm/pentest/) |
 
@@ -92,12 +96,14 @@ Un scanner se trouve dans le `pentest/` de chaque langage compilable/scriptable 
 Chaque fichier indique en en-tête sa commande exacte. Exemples :
 
 ```bash
-python3 python/pentest/offensif/injection_sql.py
 node js-ts/pentest/offensif/idor.js
 go run go/pentest/offensif/traversee_chemin.go
 bash bash/pentest/offensif/injection_commande.sh
+rustc rust/pentest/offensif/cassage.rs -o /tmp/c && /tmp/c
 javac -d build java/pentest/offensif/*.java && java -cp build XmlXxe
 ```
+
+> 🐍 Pour les démos **Python**, voir le dépôt [Python_guide](https://github.com/TN-RedTeam/Python_guide/tree/main/pentest).
 
 ➡️ Voir aussi le volet « sécurité » du [COMPARATIF.md](./COMPARATIF.md) (quel langage pour
 quelle tâche offensive) et le [SOMMAIRE.md](./SOMMAIRE.md).

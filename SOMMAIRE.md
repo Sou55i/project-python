@@ -1,7 +1,10 @@
 # 🗺️ Sommaire & parcours d'apprentissage
 
-Ce dépôt enseigne **10 langages** avec la **même pédagogie**. Cette page sert de **point de
+Ce dépôt enseigne **9 langages** avec la **même pédagogie**. Cette page sert de **point de
 départ** : elle te dit *dans quel ordre* apprendre, et te donne tous les liens.
+
+> 🐍 **Python a son propre dépôt** : **[TN-RedTeam/Python_guide](https://github.com/TN-RedTeam/Python_guide)**.
+> Si tu débutes la programmation, **commence par là**, puis reviens ici pour un 2ᵉ langage.
 
 > Tu hésites sur le langage à choisir selon ton objectif ? Lis d'abord le
 > **[COMPARATIF.md](./COMPARATIF.md)** (la même chose dans plusieurs langages + « quel langage
@@ -16,13 +19,13 @@ technique — chaque étape réutilise des concepts de la précédente.
 
 | Ordre | Langage | Pourquoi à ce moment-là |
 |:----:|---------|--------------------------|
-| 1 | 🐍 **[Python](./python/)** | Le plus lisible : tu apprends les **concepts** (variables, boucles, fonctions, objets) sans te battre avec la syntaxe. |
-| 2 | 🐚 **[Bash](./bash/)** | Automatiser ton terminal et enchaîner des outils : indispensable au quotidien sous Linux/macOS. |
-| 3 | 🟦 **[PowerShell](./powershell/)** | L'équivalent côté **Windows**, avec une idée puissante : le pipeline d'**objets**. |
-| 4 | 🐹 **[Go](./go/)** | Premier langage **compilé** mais doux : typage statique, mais mémoire automatique. |
-| 5 | 🇨 **[C](./c/)** | Tu passes « sous le capot » : compilation, types, **pointeurs et mémoire** manuelle. |
-| 6 | ➕ **[C++](./cpp/)** | Le C + les objets et la **STL** : la performance avec des outils modernes. |
-| 7 | ⚙️ **[Assembleur](./asm/)** | Le plus bas niveau : tu vois **tout** ce que les autres langages cachent. |
+| 0 | 🐍 **[Python](https://github.com/TN-RedTeam/Python_guide)** *(dépôt dédié)* | Le plus lisible : tu apprends les **concepts** (variables, boucles, fonctions, objets) sans te battre avec la syntaxe. |
+| 1 | 🐚 **[Bash](./bash/)** | Automatiser ton terminal et enchaîner des outils : indispensable au quotidien sous Linux/macOS. |
+| 2 | 🟦 **[PowerShell](./powershell/)** | L'équivalent côté **Windows**, avec une idée puissante : le pipeline d'**objets**. |
+| 3 | 🐹 **[Go](./go/)** | Premier langage **compilé** mais doux : typage statique, mais mémoire automatique. |
+| 4 | 🇨 **[C](./c/)** | Tu passes « sous le capot » : compilation, types, **pointeurs et mémoire** manuelle. |
+| 5 | ➕ **[C++](./cpp/)** | Le C + les objets et la **STL** : la performance avec des outils modernes. |
+| 6 | ⚙️ **[Assembleur](./asm/)** | Le plus bas niveau : tu vois **tout** ce que les autres langages cachent. |
 
 Et trois langages très demandés, à aborder quand tu veux :
 
@@ -51,11 +54,10 @@ Chaque parcours suit **exactement le même plan** (clique sur un langage pour le
 
 ---
 
-## 📚 Les 10 parcours en un coup d'œil
+## 📚 Les 9 parcours en un coup d'œil
 
 | Langage | Le cœur du parcours (modules 02→06/09) | Sécurité |
 |---------|-----------------------------------------|----------|
-| 🐍 **[Python](./python/)** | fichiers, web/APIs, données, POO, concurrence | [pentest](./python/pentest/) |
 | 🐚 **[Bash](./bash/)** | fichiers/redirections, texte (grep/sed/awk), arguments, tableaux, parallélisme | [pentest](./bash/pentest/) |
 | 🟦 **[PowerShell](./powershell/)** | fichiers, **pipeline d'objets**, paramètres, collections, modules | [pentest](./powershell/pentest/) |
 | 🇨 **[C](./c/)** | tableaux/chaînes, **pointeurs & mémoire**, structures, fichiers, threads | [pentest](./c/pentest/) |
@@ -70,8 +72,8 @@ Chaque parcours suit **exactement le même plan** (clique sur un langage pour le
 
 ## 🔭 Ressources transverses
 
-- **[COMPARATIF.md](./COMPARATIF.md)** — le même code dans les 10 langages + guide de choix.
+- **[COMPARATIF.md](./COMPARATIF.md)** — le même code dans plusieurs langages + guide de choix.
 - **[SECURITE.md](./SECURITE.md)** — index de toutes les démos pentest (éducatives), par thème.
-- **[Parcours Python complet](./python/)** — le plus fourni (idéal pour débuter).
+- **[Cours Python complet](https://github.com/TN-RedTeam/Python_guide)** — dépôt dédié, le plus fourni (idéal pour débuter).
 
 Bon apprentissage ! 🚀
