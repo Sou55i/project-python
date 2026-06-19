@@ -1,0 +1,49 @@
+name: CI — Cours Python
+
+# Ce workflow est destiné au DÉPÔT PYTHON AUTONOME (quand le dossier python/ est
+# promu à la racine via `git subtree split`). Dans le mono-dépôt multi-langages,
+# GitHub l'ignore : il ne lit les workflows que dans le .github/ RACINE.
+#
+# But : à chaque modification, vérifier que tout le code Python du cours est
+# valide (pas d'erreur de syntaxe) et que les exercices corrigés passent au vert.
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  python:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupérer le code
+        uses: actions/checkout@v4
+
+      - name: Installer Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Installer les dépendances (pandas, requests, ...)
+        run: pip install -r requirements.txt
+
+      # --- 1) Compiler tous les .py : détecte les erreurs de syntaxe ---
+      - name: Compiler tout le Python
+        run: |
+          set -e
+          echo "::group::py_compile"
+          python -m py_compile $(find . -name '*.py')
+          echo "::endgroup::"
+
+      # --- 2) Lancer les corrigés : ils doivent tous passer au vert ---
+      #     (les solutions.py n'utilisent que la bibliothèque standard)
+      - name: Vérifier les exercices corrigés (solutions.py)
+        run: |
+          set -e
+          echo "::group::solutions"
+          for f in $(find . -name 'solutions.py' | sort); do
+            echo "▶ $f"
+            python "$f"
+          done
+          echo "::endgroup::"
