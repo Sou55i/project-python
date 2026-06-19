@@ -16,6 +16,16 @@
 
 ---
 
+## 🧵 Le fil rouge (à faire en premier si tu débutes)
+
+Avant les projets « finis » ci-dessous, il y a le **[fil rouge](./fil_rouge/)** : un **même**
+gestionnaire de dépenses construit en **5 étapes**, de 3 variables jusqu'à une vraie appli. C'est
+la meilleure façon de comprendre **comment un programme grandit** — une notion à la fois.
+
+👉 **[Ouvrir le fil rouge](./fil_rouge/)**
+
+---
+
 ## 📂 Les projets disponibles
 
 ### 1. 📇 Carnet de contacts — [`carnet_contacts.py`](./carnet_contacts.py)
