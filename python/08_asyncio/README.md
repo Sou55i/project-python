@@ -106,6 +106,9 @@ asyncio.run(main())
 
 ## 🏁 Exercices
 
+> 🎯 **Entraînement guidé et auto-corrigé** : complète [`exercices.py`](./exercices.py) (✅/❌ en
+> direct). Corrigé dans [`solutions.py`](./solutions.py).
+
 1. **Lis et lance** [`demo_async.py`](./demo_async.py) : compare la durée synchrone vs asynchrone.
 2. **Ajoute une 3ᵉ tâche** dans le `gather` et observe que le total reste ≈ la tâche la plus
    longue.

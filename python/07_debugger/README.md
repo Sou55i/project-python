@@ -108,6 +108,10 @@ Un outil ne remplace pas le raisonnement. Face à un bug :
 
 ## 🏁 Exercices
 
+> 🎯 **Entraînement « chasse aux bugs »** : [`exercices.py`](./exercices.py) contient des
+> fonctions **buggées** à réparer (lance-le, lis les ❌, corrige). Corrigé **expliqué** dans
+> [`solutions.py`](./solutions.py).
+
 1. **Lance** [`demo_debug.py`](./demo_debug.py) : il contient un bug subtil.
 2. **Pose un `breakpoint()`** avant la ligne suspecte et inspecte la variable `total` (avec `p
    total`), puis avance avec `n`.

@@ -137,6 +137,10 @@ Du code lisible se relit et se corrige plus vite. Deux familles d'outils :
 
 ## 🏁 Exercices
 
+> 🎯 **Entraînement TDD** : dans [`exercices.py`](./exercices.py), les **tests sont déjà écrits** —
+> implémente les fonctions pour les faire passer au vert (rouge → vert). Corrigé dans
+> [`solutions.py`](./solutions.py).
+
 1. **Installe** pytest (`pip install pytest`) et lance `pytest` dans ce dossier.
 2. **Lis** [`test_demo.py`](./test_demo.py) pour voir la structure d'un fichier de tests.
 3. **Écris tes tests** : crée une fonction `est_pair(n)` et un fichier `test_pair.py` qui vérifie

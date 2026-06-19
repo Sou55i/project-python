@@ -126,6 +126,9 @@ total = sum(n ** 2 for n in nombres)   # pas de liste créée : on additionne au
 
 ## 🏁 Exercices
 
+> 🎯 **Entraînement guidé et auto-corrigé** : complète [`exercices.py`](./exercices.py) (✅/❌ en
+> direct). Corrigé dans [`solutions.py`](./solutions.py).
+
 1. **Lis et lance** [`generateurs.py`](./generateurs.py) (différence de consommation mémoire).
 2. **Compréhension** : à partir de `noms = ["Alice", "Bob", "Anna", "Tom"]`, construis la liste
    de ceux qui commencent par `"A"`.
