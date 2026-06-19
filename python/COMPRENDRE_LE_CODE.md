@@ -25,7 +25,7 @@ Ne lis **pas** un script bêtement de la première à la dernière ligne. Fais c
 
 ## 2. Décoder une ligne « de l'intérieur vers l'extérieur »
 
-Prenons **ton exemple** :
+Prenons un exemple courant :
 
 ```python
 print(f"  [A] → {', '.join(ips)}")
@@ -166,8 +166,8 @@ Ils permettent à TES objets de réagir aux opérations standard de Python :
 
 ### 3.5 Le **simple** underscore `_nom` — « privé par convention »
 
-Quand tu vois **un seul** underscore au DÉBUT d'un nom — comme dans ton exemple
-`_resoudre_stdlib` — ça veut dire :
+Quand on voit **un seul** underscore au DÉBUT d'un nom — par exemple
+`_un_aide_interne` — ça veut dire :
 
 > 🔒 **« Ceci est un détail interne. Ne l'utilise pas depuis l'extérieur, c'est une fonction
 > d'aide privée. »**
@@ -176,11 +176,11 @@ Ce n'est **pas** une protection technique (Python ne t'empêche pas de l'appeler
 **convention** entre développeurs : « touche pas, c'est de la plomberie interne ».
 
 ```python
-def resoudre(domaine):       # ← fonction "publique" : c'est ELLE qu'on appelle
+def traiter(donnee):         # ← fonction "publique" : c'est ELLE qu'on appelle de l'extérieur
     ...
-    return _resoudre_stdlib(domaine)   # ← helper "privé" : plomberie interne
+    return _traiter_interne(donnee)    # ← aide "privée" : plomberie interne
 
-def _resoudre_stdlib(domaine):   # le _ dit "détail d'implémentation"
+def _traiter_interne(donnee):   # le _ dit "détail d'implémentation, ne pas appeler dehors"
     ...
 ```
 
@@ -201,7 +201,7 @@ Python considère comme **« faux »** (*falsy*) : `False`, `None`, `0`, `""` (t
 `[]` (liste vide), `{}` (dict vide). Donc `if not ips:` = *« si la liste est vide »*, et
 `if ips:` = *« s'il y a au moins une IP »*. Pas besoin de `len(ips) == 0`.
 
-### Le « return tôt » (guard clause) — **exactement ton exemple DNS**
+### Le « return tôt » (guard clause) — le patron de **repli** (fallback)
 
 ```python
 if not DNS_LIB:

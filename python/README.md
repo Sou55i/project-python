@@ -68,6 +68,9 @@ appliqué** (automatisation) pour mettre les concepts en pratique.
 
 ## 🧠 Comprendre VRAIMENT le code (à lire si tu bloques en lisant des scripts)
 
+- **[LES_SYMBOLES.md](./LES_SYMBOLES.md)** : à quoi servent `( )`, `[ ]`, `{ }`, `.`, `=`, `%`,
+  `:` — **quand** les mettre et **pourquoi** — et surtout **comment savoir quels arguments**
+  accepte une fonction (le `exist_ok=`, le `2` entre parenthèses…).
 - **[COMPRENDRE_LE_CODE.md](./COMPRENDRE_LE_CODE.md)** : lire et **décoder** n'importe quelle
   ligne (les `__main__`, `__init__.py`, `', '.join(...)`, `if not x`, le `_prive`…).
 - **[ECRIRE_UN_SCRIPT.md](./ECRIRE_UN_SCRIPT.md)** : la **méthode pour raisonner** et trouver

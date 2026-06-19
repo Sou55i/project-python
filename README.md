@@ -79,6 +79,8 @@ python3 python/00_demarrer/hello.py
 
 ## 📎 Ressources
 
+- 🔣 **[python/LES_SYMBOLES.md](./python/LES_SYMBOLES.md)** — quand/pourquoi mettre `( )`,
+  `[ ]`, `{ }`, `.`, `=`, `%`, `:`, et **comment savoir quels arguments** prend une fonction.
 - 🧠 **[python/COMPRENDRE_LE_CODE.md](./python/COMPRENDRE_LE_CODE.md)** — lire et **décoder**
   n'importe quel script (`__main__`, `__init__.py`, `', '.join(...)`, `if not x`…). *À lire si
   tu bloques en lisant du code.*

@@ -1,10 +1,11 @@
 # 🧭 Écrire un script de zéro — la méthode pour RAISONNER
 
-> « J'ai essayé d'écrire un script simple (compter les fichiers d'un dossier, convertir du
-> JSON en SQL) mais j'ai du mal à trouver les arguments / les bonnes fonctions. »
+> Savoir écrire `if` ou `for` ne suffit pas à écrire un script : devant une page blanche, le
+> débutant bute souvent sur *« par où commencer ? quelle fonction utiliser ? quels
+> arguments ? »*.
 >
-> C'est **le** vrai blocage du débutant : pas la syntaxe, mais **le raisonnement**. Personne
-> ne « connaît » par cœur la bonne fonction — on la **trouve** avec une méthode. La voici.
+> C'est **le** vrai blocage : pas la syntaxe, mais **le raisonnement**. Personne ne « connaît »
+> par cœur la bonne fonction — on la **trouve** avec une méthode. La voici.
 
 ---
 
